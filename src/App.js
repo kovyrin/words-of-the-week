@@ -111,7 +111,7 @@ function App() {
       </div>
       <div className="add-word">
         <form onSubmit={addWordSubmit}>
-          <input type="text" placeholder="New word" lang="fr" spellCheck={false} autoCorrect="off"></input>
+          <input type="text" placeholder="Add a word..." lang="fr" spellCheck={false} autoCorrect="off"></input>
           <button type="submit">Add</button>
         </form>
       </div>

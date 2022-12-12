@@ -126,7 +126,7 @@ function App() {
     event.preventDefault();
     const newWord = event.target.elements[0].value;
     addWord(newWord);
-    event.target.reset();
+    updateNewWord('');
   }
 
   // Handle delete word button click

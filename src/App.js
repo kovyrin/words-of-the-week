@@ -39,7 +39,7 @@ function App() {
   // Define state for storing words of the week
   const [words, setWords] = useState(() => {
     const localData = localStorage.getItem('words');
-    return localData ? JSON.parse(localData).sort() : [];
+    return localData ? JSON.parse(localData) : [];
   })
 
   // When the words state changes, update localStorage
@@ -83,9 +83,7 @@ function App() {
   // Add a word to the list
   const addWord = (word) => {
     const newWord = word.trim();
-    if (newWord !== '') {
-      setWords([...words, newWord].sort());
-    }
+    if (newWord !== '') setWords([...words, newWord]);
   }
 
   // Remove a word from the list

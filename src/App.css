@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  border: 1px solid #777;
 }
 
 .App-header {
@@ -111,6 +114,7 @@
   margin-top: 30px;
   border-top: 1px solid #777;
   padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .voiceSelector select {

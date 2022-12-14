@@ -53,7 +53,6 @@ function App() {
 
     word = normalizeWord(word);
     if (word === "") {
-      console.log("empty word");
       setSuggestions([]);
       setNewWordTranslations([]);
       return;
@@ -64,19 +63,16 @@ function App() {
     setNewWordTranslations(translations);
 
     if (translations.length > 0) {
-      console.log("found translations");
       setSuggestions([]);
       return;
     }
 
     const wordSuggestions = noAccentLookup[word] || [];
     if (wordSuggestions.length === 0) {
-      console.log("no suggestions");
       setSuggestions([]);
       return;
     }
 
-    console.log("found suggestions");
     setSuggestions(wordSuggestions);
   }
 

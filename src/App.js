@@ -151,7 +151,7 @@ function App() {
   // Handle say word button click
   const sayWordClick = (event) => {
     const index = event.target.closest('.word').dataset.index;
-    const word = words[index];
+    const word = words[index].replace('-', ' '); // SpeechSynthesis doesn't like hyphens (stops speaking)
     const voiceURI = document.getElementById('voiceSelect').value;
     const frenchVoice = speech.getVoices().find(voice => voice.voiceURI === voiceURI);
     const message = new SpeechSynthesisUtterance(word);

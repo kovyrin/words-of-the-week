@@ -249,9 +249,6 @@ function App() {
           ))
         }
       </div>
-      <div className="word-feedback">
-        {renderFeedback()}
-      </div>
       <div className="add-word">
         <form onSubmit={addWordSubmit}>
           <input
@@ -264,6 +261,10 @@ function App() {
             onChange={newWordChanged}
             autoCorrect="off"
           />
+          <div className="word-feedback">
+            {renderFeedback()}
+          </div>
+
           <button type="submit">Add</button>
         </form>
       </div>

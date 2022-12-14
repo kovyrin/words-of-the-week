@@ -70,7 +70,6 @@
 .word-feedback {
   margin-top: 7px;
   margin-bottom: 7px;
-  height: 1em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -83,14 +82,9 @@
   cursor: pointer;
 }
 
-.translation {
-  display: inline-block;
-  margin: 0 5px;
-  font-weight: semi-bold;
-}
-
 .add-word {
   display: block;
+  margin-top:10px;
 }
 
 .add-word input {
@@ -101,6 +95,15 @@
   border: 1px solid #777;
   font-size: 1.5em;
 }
+
+.add-word .translation {
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: semi-bold;
+  background-color: #eee;
+  padding: 2px;
+}
+
 
 .add-word button {
   display: block;

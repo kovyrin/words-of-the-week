@@ -11,8 +11,20 @@ function App() {
     return word.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 
+  // Articles, etc we do not want to consider during lookup
+  const removeWords = [
+    'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'd\'', 'l\'', 'se',
+  ];
+
   function normalizeWord(word) {
-    return word.trim().toLowerCase().split(/[^A-zÀ-ú]/).pop();
+    word = word.trim().toLowerCase();
+
+    // Remove words
+    removeWords.forEach(removeWord => {
+      word = word.replace(new RegExp(`^${removeWord} `), '');
+    });
+
+    return word;
   }
 
   // Build a lookup table from words without accets to words in the dictionary

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import './App.css';
-import frenchDict from './apertium-fra-eng.fra-eng.json';
+import frenchDict from './fra-eng.json';
 
 function App() {
   const speech = window.speechSynthesis;
@@ -168,6 +168,18 @@ function App() {
     updateNewWord(event.target.value);
   }
 
+  // Archive the words of the week
+  const archiveWords = () => {
+    if (!window.confirm("Are you sure you want to archive the words of the week?")) {
+      return;
+    }
+
+    let archive = JSON.parse(localStorage.getItem('wordsArchive')) || [];
+    archive = [...archive, ...words];
+    localStorage.setItem('wordsArchive', JSON.stringify(archive));
+    setWords([]);
+  }
+
   // Render suggestions list
   const renderSuggestions = () => {
     return (
@@ -209,9 +221,6 @@ function App() {
     <div className="App">
       <div className="App-header">
         Words of the Week
-        <div className="App-subheader">
-        {Object.keys(frenchDict).length} words in the dictionary
-      </div>
       </div>
       <div className="words">
         {
@@ -249,6 +258,11 @@ function App() {
           />
           <button type="submit">Add</button>
         </form>
+      </div>
+      <div className="tools">
+        <div className="tool">
+          <button onClick={archiveWords}>Archive</button>
+        </div>
       </div>
       <div className="voiceSelector">
         <label htmlFor="voiceSelect">Voice:</label>

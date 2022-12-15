@@ -11,9 +11,24 @@ dictcc_dict = JSON.parse(File.read(dictcc_dict_file))
 
 dict = {}
 dictcc_dict.each do |word, translations|
+  word = word.downcase
+
   dict[word] = translations
   if apertium_dict[word]
     dict[word] += apertium_dict[word]
+    dict[word].compact!
+    dict[word].uniq!
+    dict[word].sort_by!(&:length)
+  end
+
+  dict[word] = dict[word][0..4]
+end
+
+apertium_dict.each do |word, translations|
+  word = word.downcase
+
+  unless dict[word]
+    dict[word] = translations
     dict[word].compact!
     dict[word].uniq!
     dict[word].sort_by!(&:length)

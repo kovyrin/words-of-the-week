@@ -62,7 +62,7 @@ function Training({words, voice, setVoice}) {
           </div>
 
           <div class="tool">
-            <Link to='/' class="pure-button">Finish</Link>
+            <Link to='/words-of-the-week' class="pure-button">Finish</Link>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ function Training({words, voice, setVoice}) {
           </div>
 
           <div class="tool">
-            <Link to='/' class="pure-button">Finish</Link>
+            <Link to='/words-of-the-week' class="pure-button">Finish</Link>
           </div>
         </div>
       </div>

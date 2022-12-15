@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/words-of-the-week" element={<Layout />}>
           <Route index element={
             <Home words={words} setWords={setWords} voice={voice} setVoice={setVoice} />
           } />

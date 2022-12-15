@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 
-function WordsList(props) {
+import './WordsList.css';
+
+function WordsList({ words, removeWord, dictionary }) {
   // Custom speech rate overrides for different voices
   const speechRateOverrides = {
     'Thomas': 0.8
@@ -38,7 +40,7 @@ function WordsList(props) {
   // Handle say word button click
   const sayWordClick = (event) => {
     const index = event.target.closest('.word').dataset.index;
-    const word = props.words[index].replace('-', ' '); // SpeechSynthesis doesn't like hyphens (stops speaking)
+    const word = words[index].replace('-', ' '); // SpeechSynthesis doesn't like hyphens (stops speaking)
     const voiceURI = document.getElementById('voiceSelect').value;
     const frenchVoice = speech.getVoices().find(voice => voice.voiceURI === voiceURI);
     const message = new SpeechSynthesisUtterance(word);
@@ -47,23 +49,31 @@ function WordsList(props) {
     speech.speak(message);
   }
 
+  // Handle delete word button click
+  const deleteWordClick = (event) => {
+    if (!window.confirm("Are you sure you want to delete this word?")) {
+      return;
+    }
+    const index = event.target.closest('.word').dataset.index;
+    removeWord(index);
+  }
 
   return (
     <div className="words">
     {
-      props.words.map((word, index) => (
+      words.map((word, index) => (
         <div className="word" key={index} data-index={index}>
           <div className='word-info' onClick={sayWordClick}>
             <div className="word-text">{word}</div>
             <div className="word-translation">
               {
-                props.dictionary.translate(word).map((translation, index) => (
+                dictionary.translate(word).map((translation, index) => (
                   <div key={index}>{translation}</div>
                 ))
               }
             </div>
           </div>
-          <div className="word-delete" onClick={props.deleteWordClick}>🗑️</div>
+          <div className="word-delete" onClick={deleteWordClick}>🗑️</div>
         </div>
       ))
     }

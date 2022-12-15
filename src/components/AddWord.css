@@ -1,0 +1,45 @@
+.add-word {
+  display: block;
+  margin-top:10px;
+}
+
+.add-word input {
+  display: block;
+  min-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #777;
+  font-size: 1.5em;
+}
+
+.word-feedback {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.word-feedback .translation {
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: semi-bold;
+  background-color: #eee;
+  padding: 2px;
+}
+
+.word-feedback .suggestion {
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: bold;
+  text-decoration: dashed underline;
+  cursor: pointer;
+}
+
+.add-word button {
+  display: block;
+  height: 50px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}

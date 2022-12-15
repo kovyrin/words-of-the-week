@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
+import Dictionary from '../Dictionary';
+
 import WordsList from '../components/WordsList';
 import AddWord from '../components/AddWord';
+import VoiceSelector from '../components/VoiceSelector';
 
 import './Home.css';
-import Dictionary from '../Dictionary';
 
 function Home() {
   const dictionary = new Dictionary();
+
+  // Define state for storing current selected voice for Web Speech API
+  const [voice, setVoice] = useState(null);
 
   // Define state for storing words of the week
   const [words, setWords] = useState(() => {
@@ -55,6 +60,7 @@ function Home() {
         words={words}
         removeWord={removeWord}
         dictionary={dictionary}
+        voice={voice}
       />
 
       <AddWord
@@ -67,10 +73,11 @@ function Home() {
           <button onClick={archiveWords}>Archive</button>
         </div>
       </div>
-      <div className="voiceSelector">
-        <label htmlFor="voiceSelect">Voice:</label>
-        <select id="voiceSelect"></select>
-      </div>
+
+      <VoiceSelector
+        currentVoice={voice}
+        setCurrentVoice={setVoice}
+      />
     </div>
   );
 }

@@ -1,0 +1,11 @@
+.voice-selector {
+  border-top: 1px solid #777;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.voice-selector select {
+  margin-left: 5px;
+  width: 200px;
+  height: 30px;
+}

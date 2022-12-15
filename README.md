@@ -1,6 +1,6 @@
 # French Words of the Week
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application (no backend required) for learning French word pronounciation and spelling. Add new words each week, practice spelling and comprehension, archive the words at the end of the week and start again.
 
 ## Available Scripts
 

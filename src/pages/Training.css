@@ -1,0 +1,12 @@
+.progress {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.description ul {
+  list-style-type: none;
+}
+
+.description li {
+  margin-bottom: 10px;
+}

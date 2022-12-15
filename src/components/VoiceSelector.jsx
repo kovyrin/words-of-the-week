@@ -10,7 +10,6 @@ const preferredVoices = [
 const speech = window.speechSynthesis;
 
 function VoiceSelector({currentVoice, setCurrentVoice}) {
-
   // State for storing available voices
   const [voices, setVoices] = useState([]);
 
@@ -20,21 +19,23 @@ function VoiceSelector({currentVoice, setCurrentVoice}) {
     const frenchVoices = systemVoices.filter(voice => voice.lang === 'fr-FR');
     setVoices(frenchVoices);
 
-    const selectedVoice = frenchVoices.find(voice => preferredVoices.includes(voice.name));
-    if (selectedVoice != null) {
-      setCurrentVoice(selectedVoice);
-    } else {
-      setCurrentVoice(frenchVoices[0]);
+    if (currentVoice == null) {
+      const selectedVoice = frenchVoices.find(voice => preferredVoices.includes(voice.name));
+      if (selectedVoice != null) {
+        setCurrentVoice(selectedVoice);
+      } else {
+        setCurrentVoice(frenchVoices[0]);
+      }
     }
   }
 
   // Populate the list of voices when the page loads (needed for Safari)
-  useEffect(populateVoices, [setCurrentVoice, setVoices]);
+  useEffect(populateVoices, [currentVoice, setCurrentVoice, setVoices]);
 
   // When the SpeechSynthesis object is ready (does not work in Safari), update the list of available voices
   speech.onvoiceschanged = populateVoices;
 
-  function voiceChanged(event) {
+  function selectedVoiceChanged(event) {
     const voiceURI = event.target.value;
     const voice = voices.find(voice => voice.voiceURI === voiceURI);
     setCurrentVoice(voice);
@@ -43,7 +44,7 @@ function VoiceSelector({currentVoice, setCurrentVoice}) {
   return (
     <div className="voice-selector">
     <label htmlFor="voice-select">Voice:</label>
-    <select id="voice-select" onChange={voiceChanged} value={currentVoice?.voiceURI}>
+    <select id="voice-select" onChange={selectedVoiceChanged} value={currentVoice?.voiceURI}>
       {
         voices.map((voice, index) => (
           <option key={index} value={voice.voiceURI}>{voice.name}</option>

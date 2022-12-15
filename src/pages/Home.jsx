@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import Dictionary from '../Dictionary';
 
@@ -7,23 +7,10 @@ import AddWord from '../components/AddWord';
 import VoiceSelector from '../components/VoiceSelector';
 
 import './Home.css';
+import { Link } from 'react-router-dom';
 
-function Home() {
+function Home({words, setWords, voice, setVoice}) {
   const dictionary = new Dictionary();
-
-  // Define state for storing current selected voice for Web Speech API
-  const [voice, setVoice] = useState(null);
-
-  // Define state for storing words of the week
-  const [words, setWords] = useState(() => {
-    const localData = localStorage.getItem('words');
-    return localData ? JSON.parse(localData) : [];
-  })
-
-  // When the words state changes, update localStorage
-  useEffect(() => {
-    localStorage.setItem('words', JSON.stringify(words));
-  }, [words]);
 
   // Add a word to the list
   const addWord = (word) => {
@@ -52,10 +39,6 @@ function Home() {
 
   return (
     <div>
-      <div className="App-header">
-        Words of the Week
-      </div>
-
       <WordsList
         words={words}
         removeWord={removeWord}
@@ -70,7 +53,8 @@ function Home() {
 
       <div className="tools">
         <div className="tool">
-          <button onClick={archiveWords}>Archive</button>
+          <button onClick={archiveWords} class="pure-button">Archive</button>
+          <Link to="/training" class="pure-button">Train</Link>
         </div>
       </div>
 

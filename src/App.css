@@ -24,3 +24,26 @@
 .App-link {
   color: #61dafb;
 }
+
+.tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-top: 1px solid #777;
+}
+
+.tool {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tool .pure-button {
+  margin: 0 5px;
+  width: 80px;
+  height: 80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}

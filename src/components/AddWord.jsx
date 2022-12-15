@@ -101,7 +101,7 @@ function AddWord({ addWord, dictionary }) {
           {renderFeedback()}
         </div>
 
-        <button type="submit">Add</button>
+        <button type="submit" class="pure-button">Add</button>
       </form>
     </div>
   )

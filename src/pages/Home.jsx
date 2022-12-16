@@ -13,20 +13,20 @@ function Home({words, setWords, voice, setVoice, speaker}) {
   const dictionary = new Dictionary();
 
   // Add a word to the list
-  const addWord = (word) => {
+  function addWord(word) {
     const newWord = word.trim();
     if (newWord !== '') setWords([...words, newWord]);
   }
 
   // Remove a word from the list
-  const removeWord = (index) => {
+  function removeWord(index) {
     const newWords = [...words];
     newWords.splice(index, 1);
     setWords(newWords);
   }
 
   // Archive the words of the week
-  const archiveWords = () => {
+  function archiveWords() {
     if (!window.confirm("Are you sure you want to archive the words of the week?")) {
       return;
     }

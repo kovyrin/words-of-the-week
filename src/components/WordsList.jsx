@@ -3,14 +3,12 @@ import React from 'react';
 import './WordsList.css';
 
 function WordsList({ words, removeWord, dictionary, speaker }) {
-  // Handle say word button click
-  const sayWordClick = (event) => {
+  function sayWordClick(event) {
     const index = event.target.closest('.word').dataset.index;
     speaker.say(words[index]);
   }
 
-  // Handle delete word button click
-  const deleteWordClick = (event) => {
+  function deleteWordClick(event) {
     if (!window.confirm("Are you sure you want to delete this word?")) {
       return;
     }

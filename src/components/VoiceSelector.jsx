@@ -14,7 +14,7 @@ function VoiceSelector({currentVoice, setCurrentVoice}) {
   const [voices, setVoices] = useState([]);
 
   // Populate the voice selector with available voices
-  const populateVoices = () => {
+  function populateVoices() {
     const systemVoices = speech.getVoices();
     const frenchVoices = systemVoices.filter(voice => voice.lang === 'fr-FR');
     setVoices(frenchVoices);
@@ -43,16 +43,15 @@ function VoiceSelector({currentVoice, setCurrentVoice}) {
 
   return (
     <div className="voice-selector">
-    <label htmlFor="voice-select">Voice:</label>
-    <select id="voice-select" onChange={selectedVoiceChanged} value={currentVoice?.voiceURI}>
-      {
-        voices.map((voice, index) => (
-          <option key={index} value={voice.voiceURI}>{voice.name}</option>
-        ))
-      }
-    </select>
-  </div>
-
+      <label htmlFor="voice-select">Voice:</label>
+      <select id="voice-select" onChange={selectedVoiceChanged} value={currentVoice?.voiceURI}>
+        {
+          voices.map((voice, index) => (
+            <option key={index} value={voice.voiceURI}>{voice.name}</option>
+          ))
+        }
+      </select>
+    </div>
   )
 }
 

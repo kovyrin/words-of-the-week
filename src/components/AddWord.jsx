@@ -8,7 +8,7 @@ function AddWord({ addWord, dictionary }) {
   const [suggestions, setSuggestions] = useState([]);
   const [newWordTranslations, setNewWordTranslations] = useState('');
 
-  const newWordChanged = (event) => {
+  function newWordChanged(event) {
     newWordUpdated(event.target.value);
   }
 
@@ -41,7 +41,7 @@ function AddWord({ addWord, dictionary }) {
   }
 
   // Handle new word form submission
-  const addWordSubmit = (event) => {
+  function addWordSubmit(event) {
     event.preventDefault();
     const newWord = event.target.elements[0].value;
     addWord(newWord);
@@ -78,7 +78,7 @@ function AddWord({ addWord, dictionary }) {
     )
   }
 
-  const renderFeedback = () => {
+  function renderFeedback() {
     if (newWordTranslations.length > 0) return renderNewWordTranslations();
     if (suggestions.length > 0) return renderSuggestions();
     return '';

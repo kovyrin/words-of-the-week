@@ -53,8 +53,8 @@ function Home({words, setWords, voice, setVoice}) {
 
       <div className="tools">
         <div className="tool">
-          <button onClick={archiveWords} class="pure-button">Archive</button>
-          <Link to="/words-of-the-week/training" class="pure-button">Train</Link>
+          <button onClick={archiveWords} className="pure-button">Archive</button>
+          <Link to="/words-of-the-week/training" className="pure-button">Train</Link>
         </div>
       </div>
 

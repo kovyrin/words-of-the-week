@@ -43,7 +43,7 @@ function Training({words, voice, setVoice}) {
   function renderTraining() {
     return (
       <div className="training">
-        <div class="description">
+        <div className="description">
           Listen to the word carefully and try to remember how to spell it.<br/>
           <ul>
             <li>Click "Repeat" to hear the word again.</li>
@@ -51,18 +51,18 @@ function Training({words, voice, setVoice}) {
             <li>Click "Finish" to terminate the training session.</li>
           </ul>
         </div>
-        <div class="progress">Words left: {trainingWords.length}</div>
-        <div class="tools">
-          <div class="tool">
-            <button onClick={repeatClicked} class="pure-button">Repeat</button>
+        <div className="progress">Words left: {trainingWords.length}</div>
+        <div className="tools">
+          <div className="tool">
+            <button onClick={repeatClicked} className="pure-button">Repeat</button>
           </div>
 
-          <div class="tool">
-            <button onClick={nextClicked} class="pure-button">Next</button>
+          <div className="tool">
+            <button onClick={nextClicked} className="pure-button">Next</button>
           </div>
 
-          <div class="tool">
-            <Link to='/words-of-the-week' class="pure-button">Finish</Link>
+          <div className="tool">
+            <Link to='/words-of-the-week' className="pure-button">Finish</Link>
           </div>
         </div>
       </div>
@@ -77,13 +77,13 @@ function Training({words, voice, setVoice}) {
     return (
       <div className="training">
         <div>Training complete!</div>
-        <div class="tools">
-          <div class="tool">
-            <button onClick={retryClicked} class="pure-button">Retry</button>
+        <div className="tools">
+          <div className="tool">
+            <button onClick={retryClicked} className="pure-button">Retry</button>
           </div>
 
-          <div class="tool">
-            <Link to='/words-of-the-week' class="pure-button">Finish</Link>
+          <div className="tool">
+            <Link to='/words-of-the-week' className="pure-button">Finish</Link>
           </div>
         </div>
       </div>

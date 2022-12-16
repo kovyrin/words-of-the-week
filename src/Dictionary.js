@@ -10,7 +10,7 @@ function removeAccents(word) {
   return word.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-// Build a lookup table from words without accets to words in the dictionary
+// Build a lookup table from words without accents to words in the dictionary
 // Each no-accent word can map into multiple dictionary words
 const noAccentLookup = {};
 Object.keys(frenchDict).forEach(word => {
@@ -34,15 +34,11 @@ class Dictionary {
   }
 
   translate(word) {
-    if (word === "" || word === undefined || word === null) {
-      return [];
-    }
+    if (word === "" || word === undefined || word === null) return [];
 
     // Strip article, etc
     const cleanWord = this.normalizeWord(word);
-    const translations = frenchDict[cleanWord];
-    console.log("translations for", cleanWord, ":", translations);
-    return translations || [];
+    return frenchDict[cleanWord] || [];
   }
 
   suggest(word) {

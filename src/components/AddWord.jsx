@@ -91,7 +91,7 @@ function AddWord({ addWord, dictionary }) {
           id="newWord"
           type="text"
           value={newWord}
-          placeholder="Add a word..."
+          placeholder="Add a French word..."
           lang="fr"
           spellCheck={false}
           onChange={newWordChanged}

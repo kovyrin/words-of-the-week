@@ -9,7 +9,7 @@ import VoiceSelector from '../components/VoiceSelector';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
-function Home({words, setWords, voice, setVoice}) {
+function Home({words, setWords, voice, setVoice, speaker}) {
   const dictionary = new Dictionary();
 
   // Add a word to the list
@@ -43,7 +43,7 @@ function Home({words, setWords, voice, setVoice}) {
         words={words}
         removeWord={removeWord}
         dictionary={dictionary}
-        voice={voice}
+        speaker={speaker}
       />
 
       <AddWord

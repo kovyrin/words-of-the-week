@@ -2,23 +2,11 @@ import React from 'react';
 
 import './WordsList.css';
 
-function WordsList({ words, removeWord, dictionary, voice }) {
-  // Custom speech rate overrides for different voices
-  const speechRateOverrides = {
-    'Thomas': 0.8
-  }
-
-  // Web Speech API
-  const speech = window.speechSynthesis;
-
+function WordsList({ words, removeWord, dictionary, speaker }) {
   // Handle say word button click
   const sayWordClick = (event) => {
     const index = event.target.closest('.word').dataset.index;
-    const word = words[index].replace('-', ' '); // SpeechSynthesis doesn't like hyphens (stops speaking)
-    const message = new SpeechSynthesisUtterance(word);
-    message.voice = voice;
-    message.rate = speechRateOverrides[voice.name] || 1;
-    speech.speak(message);
+    speaker.say(words[index]);
   }
 
   // Handle delete word button click

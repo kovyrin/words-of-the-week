@@ -5,13 +5,7 @@ import VoiceSelector from '../components/VoiceSelector';
 
 import './Training.css';
 
-function playWord(word, voice) {
-  const utterance = new SpeechSynthesisUtterance(word);
-  utterance.voice = voice;
-  window.speechSynthesis.speak(utterance);
-}
-
-function Training({words, voice, setVoice}) {
+function Training({words, speaker, voice, setVoice}) {
   // State for keeping the list of words to train
   const [trainingWords, setTrainingWords] = React.useState(words);
   const [trainingStarted, setTrainingStarted] = React.useState(false);
@@ -26,12 +20,12 @@ function Training({words, voice, setVoice}) {
   // Play the first word when the training starts
   useEffect(() => {
     if (trainingStarted) {
-      playWord(trainingWords[0], voice);
+      speaker.say(trainingWords[0]);
     }
-  }, [trainingStarted, voice, trainingWords]);
+  }, [trainingStarted, speaker, trainingWords]);
 
   function repeatClicked() {
-    playWord(trainingWords[0], voice);
+    speaker.say(trainingWords[0]);
   }
 
   function nextClicked() {

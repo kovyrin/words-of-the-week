@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React, {useState, useEffect} from 'react';
 
 import Layout from "./pages/Layout";
@@ -43,6 +43,7 @@ function App() {
           } />
           <Route path="*" element={<NoPage />} />
         </Route>
+        <Route path="*" element={<Navigate to="/words-of-the-week" />} />
       </Routes>
     </BrowserRouter>
   );

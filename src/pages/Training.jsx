@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import VoiceSelector from '../components/VoiceSelector';
+import FrenchSpeaker from '../FrenchSpeaker';
 
 import './Training.css';
 
-function Training({words, speaker, voice, setVoice}) {
+function Training({words, voice, setVoice}) {
+  const speaker = useMemo(() => new FrenchSpeaker(voice), [voice]);
+
   // State for keeping the list of words to train
   const [trainingWords, setTrainingWords] = React.useState(words);
   const [trainingStarted, setTrainingStarted] = React.useState(false);
@@ -19,10 +22,9 @@ function Training({words, speaker, voice, setVoice}) {
 
   // Play the first word when the training starts
   useEffect(() => {
-    if (trainingStarted) {
+    if (trainingStarted && trainingWords[0])
       speaker.say(trainingWords[0]);
-    }
-  }, [trainingStarted, speaker, trainingWords]);
+  }, [trainingStarted, voice, speaker, trainingWords]);
 
   function repeatClicked() {
     speaker.say(trainingWords[0]);

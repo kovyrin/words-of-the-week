@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import Dictionary from '../Dictionary';
+import FrenchSpeaker from '../FrenchSpeaker';
 
 import WordsList from '../components/WordsList';
 import AddWord from '../components/AddWord';
@@ -9,8 +10,9 @@ import VoiceSelector from '../components/VoiceSelector';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
-function Home({words, setWords, voice, setVoice, speaker}) {
+function Home({words, setWords, voice, setVoice}) {
   const dictionary = new Dictionary();
+  const speaker = useMemo(() => new FrenchSpeaker(voice), [voice]);
 
   // Add a word to the list
   function addWord(word) {

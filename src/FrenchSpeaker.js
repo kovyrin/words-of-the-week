@@ -4,16 +4,13 @@ const speechRateOverrides = {
 }
 
 class FrenchSpeaker {
-  constructor() {
-    this.voice = null;
+  constructor(voice) {
+    this.voice = voice;
     this.speech = window.speechSynthesis;
   }
 
-  setVoice(voice) {
-    this.voice = voice;
-  }
-
   say(word) {
+    if (!this.voice) return;
     word = word.replace('-', ' '); // SpeechSynthesis in Chrome doesn't like hyphens (stops speaking)
     const message = new SpeechSynthesisUtterance(word);
     message.voice = this.voice;

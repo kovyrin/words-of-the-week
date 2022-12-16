@@ -47,3 +47,7 @@
   align-items:center;
   justify-content:center;
 }
+
+.pure-button {
+  border: 1px solid #777 !important;
+}

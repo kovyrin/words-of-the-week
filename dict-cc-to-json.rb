@@ -38,10 +38,21 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
   end
 
   french.gsub!(/[^A-zÀ-ú0-9]*$/, '')
+  french.strip!
 
+  english.gsub!(/\[\w+\.\]/, '')
+  english.strip!
+  english.gsub!('{pl}', '')
+  english.gsub!('[female]', '')
+  english.gsub!('[male]', '')
+  english.gsub!('[female person]', '')
+  english.gsub!('[male person]', '')
   english.gsub!(/ (sb\.|sth\.|sb\.\/sth\.)$/, '')
+  english.gsub!(/\s+/, ' ')
+  english.strip!
 
-  dictionary[french.strip] << english.strip
+  next if french.split(' ').count > 4
+  dictionary[french] << english
 end
 
 puts "Writing #{json_file}..."

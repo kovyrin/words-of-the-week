@@ -36,7 +36,10 @@ class Dictionary {
   translate(word) {
     if (word === "" || word === undefined || word === null) return [];
 
-    // Strip article, etc
+    // Check the word/phrase as is
+    if (frenchDict[word]) return frenchDict[word];
+
+    // Strip article, etc and re-check
     const cleanWord = this.normalizeWord(word);
     return frenchDict[cleanWord] || [];
   }

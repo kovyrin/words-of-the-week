@@ -24,6 +24,8 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
 
   next unless data_started
 
+  french.gsub!('(qc.)', '')
+  french.gsub!('(qn./qc.)', '')
   french.gsub!(/^\([^\)]*\)/, '')
   french.gsub!(/^[^A-zÀ-ú0-9]*/, '')
 
@@ -36,8 +38,8 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
   end
 
   french.gsub!(/[^A-zÀ-ú0-9]*$/, '')
-  french.gsub!('(qc.)', '')
-  french.gsub!('(qn./qc.)', '')
+
+  english.gsub!(/ (sb\.|sth\.|sb\.\/sth\.)$/, '')
 
   dictionary[french.strip] << english.strip
 end

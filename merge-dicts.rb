@@ -13,9 +13,10 @@ class MergedDict
     @dict = Hash.new { |h, k| h[k] = [] }
   end
 
-  def add(word, translations)
+  def add(word, translations, only_if_not_present: false)
     return if word.empty?
     word = word.downcase
+    return if only_if_not_present && dict[word].any?
     dict[word] += Array(translations)
   end
 
@@ -65,10 +66,6 @@ dictcc_dict.each do |word, translations|
   dict.add(word, translations)
 end
 
-apertium_dict.each do |word, translations|
-  dict.add(word, translations)
-end
-
 top1000_dict.each do |row|
   dict.add(row['French'], row['English'])
 end
@@ -78,6 +75,11 @@ top5000_dict.each do |row|
   translations = row['word_en'].split(',').map(&:strip)
   dict.add(row['word_fr'], translations)
   top_words << row['word_fr'] unless dict.includes_bad_words?(row['word_fr'])
+end
+
+# The quality of the apertium dict is not great, so we only add words that are not already present
+apertium_dict.each do |word, translations|
+  dict.add(word, translations, only_if_not_present: true)
 end
 
 # Remove bad words

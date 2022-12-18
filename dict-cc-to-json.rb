@@ -33,13 +33,9 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
   french.gsub!(/^\([^\)]*\)/, '')
   french.gsub!(/^[^A-zÀ-ú0-9]*/, '')
 
-  puts "Analyzing #{french.inspect}..."
   if french.match(/{(f|m|f.pl|m.pl)}/) # nouns
     parts = french.split(/{[^}]+}/)
-    if parts.count > 1
-      puts "Skipping #{french.inspect} because it has multiple parts"
-      next
-    end
+    next if parts.count > 1
     french = parts.first.strip
   elsif french.match(/ q[cn]/) # verbs
     french = french.split(/ q[cn]/).first
@@ -53,19 +49,13 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
   english.gsub!(/\[\w+\.\]/, '')
   english.strip!
   english.gsub!('{pl}', '')
-  english.gsub!('[female]', '')
-  english.gsub!('[male]', '')
-  english.gsub!('[female person]', '')
-  english.gsub!('[male person]', '')
+  english.gsub!(/\[[^\]]+\]/, '')
+  english.strip!
   english.gsub!(/ (sb\.|sth\.|sb\.\/sth\.)$/, '')
   english.gsub!(/\s+/, ' ')
   english.strip!
 
-  if french.split(' ').count > 4
-    puts "Skipping #{french.inspect} because it has too many words"
-    next
-  end
-  puts "Adding #{french.inspect} => #{english.inspect}"
+  next if french.split(' ').count > 4
   dictionary[french] << english
 end
 

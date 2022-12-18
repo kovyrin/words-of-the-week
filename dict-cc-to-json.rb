@@ -33,8 +33,14 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
   french.gsub!(/^\([^\)]*\)/, '')
   french.gsub!(/^[^A-zÀ-ú0-9]*/, '')
 
+  puts "Analyzing #{french.inspect}..."
   if french.match(/{(f|m|f.pl|m.pl)}/) # nouns
-    french = french.split('{').first
+    parts = french.split(/{[^}]+}/)
+    if parts.count > 1
+      puts "Skipping #{french.inspect} because it has multiple parts"
+      next
+    end
+    french = parts.first.strip
   elsif french.match(/ q[cn]/) # verbs
     french = french.split(/ q[cn]/).first
   elsif french.include?('[')
@@ -55,7 +61,11 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
   english.gsub!(/\s+/, ' ')
   english.strip!
 
-  next if french.split(' ').count > 4
+  if french.split(' ').count > 4
+    puts "Skipping #{french.inspect} because it has too many words"
+    next
+  end
+  puts "Adding #{french.inspect} => #{english.inspect}"
   dictionary[french] << english
 end
 

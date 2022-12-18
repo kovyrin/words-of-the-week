@@ -6,48 +6,56 @@ import FrenchSpeaker from '../FrenchSpeaker';
 
 import './Training.css';
 
-function Training({words, voice, setVoice}) {
+function Training({words, voice, setVoice, dictionary}) {
   const speaker = useMemo(() => new FrenchSpeaker(voice), [voice]);
 
   // State for keeping the list of words to train
-  const [trainingWords, setTrainingWords] = React.useState(words);
+  const [remainingTrainingWords, setRemainingTrainingWords] = React.useState([]);
+  const [allTrainingWords, setAllTrainingWords] = React.useState([]);
   const [trainingStarted, setTrainingStarted] = React.useState(false);
 
-  // Initialize with the current week's list of words
-  useEffect(() => {
-    // Shuffle the words from this week and set them as the training words
-    setTrainingWords(words.sort(() => Math.random() - 0.5));
-    setTrainingStarted(true);
-  }, [words]);
 
   // Play the first word when the training starts
   useEffect(() => {
-    if (trainingStarted && trainingWords[0])
-      speaker.say(trainingWords[0]);
-  }, [trainingStarted, voice, speaker, trainingWords]);
+    const currentWord = remainingTrainingWords[0];
+    if (trainingStarted && currentWord)
+      speaker.say(currentWord);
+  }, [trainingStarted, voice, speaker, remainingTrainingWords]);
+
+  function getCurrentWord() {
+    return remainingTrainingWords[0];
+  }
 
   function repeatClicked() {
-    speaker.say(trainingWords[0]);
+    speaker.say(getCurrentWord());
   }
 
   function nextClicked() {
-    const newTrainingWords = [...trainingWords];
+    const newTrainingWords = [...remainingTrainingWords];
     newTrainingWords.shift();
-    setTrainingWords(newTrainingWords);
+    setRemainingTrainingWords(newTrainingWords);
   }
 
-  function renderTraining() {
+  function finishClicked() {
+    setRemainingTrainingWords([]);
+    setTrainingStarted(false);
+  }
+
+  function renderTrainingWord() {
     return (
       <div className="training">
         <div className="description">
-          Listen to the word carefully and try to remember how to spell it.<br/>
-          <ul>
-            <li>Click "Repeat" to hear the word again.</li>
-            <li>Click "Next" to move to the next word.</li>
-            <li>Click "Finish" to terminate the training session.</li>
-          </ul>
+          <div className="title">Word {remainingTrainingWords.length} of {allTrainingWords.length}</div>
         </div>
-        <div className="progress">Words left: {trainingWords.length}</div>
+
+        <div className="wordInfo">
+          {
+            dictionary.translate(getCurrentWord()).map((translation, index) => (
+              <div key={index} className="translation">{translation}</div>
+            ))
+          }
+        </div>
+
         <div className="tools">
           <div className="tool">
             <button onClick={repeatClicked} className="pure-button">Repeat</button>
@@ -58,7 +66,7 @@ function Training({words, voice, setVoice}) {
           </div>
 
           <div className="tool">
-            <Link to='/words-of-the-week' className="pure-button">Finish</Link>
+            <button onClick={finishClicked} className="pure-button">Finish</button>
           </div>
         </div>
       </div>
@@ -66,7 +74,21 @@ function Training({words, voice, setVoice}) {
   }
 
   function retryClicked() {
-    setTrainingWords(words);
+    setRemainingTrainingWords(allTrainingWords);
+  }
+
+  function startTraining(words) {
+    if (words.length > 20) {
+      words = words.sort(() => Math.random() - 0.5).slice(0, 20);
+    }
+    setAllTrainingWords(words);
+    setRemainingTrainingWords(words);
+    setTrainingStarted(true);
+  }
+
+  function startTrainingTop(n) {
+    const topWords = dictionary.top(n);
+    startTraining(topWords);
   }
 
   function renderComplete() {
@@ -86,11 +108,43 @@ function Training({words, voice, setVoice}) {
     );
   }
 
+  function renderTraining() {
+    return (remainingTrainingWords.length === 0 ? renderComplete() : renderTrainingWord());
+  }
+
+  function renderOptions() {
+    return (
+      <div>
+        <div className="description">
+          Start a training session and practice a set of up to 20 French words.<br/>
+          Listen to each word carefully and try to remember how to spell it and what it means.<br/>
+          You can train on the words from this week or from a random set of popular French words.
+        </div>
+
+        <ul className="trainingOptions">
+          <li><button className="pure-button" onClick={() => startTraining(words)}>Words of the Week</button></li>
+          <li>
+            <button className="pure-button" onClick={() => startTrainingTop(100)}>Top-100</button>
+          </li>
+          <li>
+            <button className="pure-button" onClick={() => startTrainingTop(1000)}>Top-1000</button>
+          </li>
+          <li>
+            <button className="pure-button" onClick={() => startTrainingTop(5000)}>Top-5000</button>
+          </li>
+          <li>
+            <Link className="pure-button" to="/words-of-the-week/">Back</Link>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+
   return (
     <div>
       <h1>Training</h1>
 
-      {trainingWords.length === 0 ? renderComplete() : renderTraining()}
+      { trainingStarted ? renderTraining() : renderOptions() }
 
       <VoiceSelector
         currentVoice={voice}

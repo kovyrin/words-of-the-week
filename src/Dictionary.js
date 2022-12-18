@@ -1,4 +1,5 @@
 import frenchDict from './fra-eng.json';
+import topWords from './top-5000.json';
 
   // Articles, etc we do not want to consider during lookup
 const removeWords = [
@@ -22,6 +23,14 @@ Object.keys(frenchDict).forEach(word => {
 });
 
 class Dictionary {
+  constructor() {
+    this.topWords = topWords;
+  }
+
+  top(n) {
+    return this.topWords.slice(0, n);
+  }
+
   normalizeWord(word) {
     word = word.trim().toLowerCase();
 

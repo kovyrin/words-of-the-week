@@ -954,10 +954,6 @@
     "dust mite",
     "(house) dust mite"
   ],
-  "acariâtre": [
-    "quarrelsome",
-    "cantankerous"
-  ],
   "acarologie": [
     "acarology"
   ],
@@ -1293,12 +1289,6 @@
   ],
   "accouru": [
     "rushed"
-  ],
-  "accoutrement": [
-    "attire",
-    "outfit",
-    "clothes",
-    "rig-out [attire]"
   ],
   "accoutré": [
     "dressed"
@@ -2519,8 +2509,7 @@
   "afficher": [
     "announce",
     "advertise",
-    "to display",
-    "to show off with"
+    "to display"
   ],
   "affiche": [
     "bill",
@@ -2686,9 +2675,6 @@
   "affréter": [
     "allure",
     "to charter"
-  ],
-  "affubler": [
-    "dress"
   ],
   "affut": [
     "deerstand",
@@ -3572,9 +3558,6 @@
   "alcoolisme": [
     "alcoholism"
   ],
-  "alcoolo": [
-    "alcoholic [person]"
-  ],
   "alcool": [
     "spirit",
     "ethanol",
@@ -4016,9 +3999,6 @@
     "cheese straw",
     "safety match",
     "friction match"
-  ],
-  "allumeuse": [
-    "tease"
   ],
   "allure": [
     "look",
@@ -5138,7 +5118,6 @@
     "Andorra"
   ],
   "andouille": [
-    "twerp",
     "andouille",
     "plonker [fool]"
   ],
@@ -5166,7 +5145,6 @@
     "anecdote"
   ],
   "anecdotique": [
-    "trivial",
     "anecdotal"
   ],
   "anesthésiant": [
@@ -6194,10 +6172,9 @@
   ],
   "aplomb": [
     "aplomb",
-    "audacity",
-    "boldness",
     "equilibrium",
-    "perpendicular"
+    "perpendicular",
+    "inner harmony"
   ],
   "apnée": [
     "apnea",
@@ -6262,9 +6239,6 @@
   "apothéose": [
     "apotheosis",
     "supreme achievement"
-  ],
-  "apparatchik": [
-    "apparatchik"
   ],
   "apparat": [
     "pomp",
@@ -10000,8 +9974,7 @@
   ],
   "autoritairement": [
     "dictatorially",
-    "authoritatively",
-    "authoritarianly"
+    "authoritatively"
   ],
   "autoritarisme": [
     "authoritarianism"
@@ -12029,7 +12002,6 @@
     "painting"
   ],
   "badigeonner": [
-    "to daub",
     "to whitewash"
   ],
   "badigeonné": [
@@ -12692,12 +12664,10 @@
   ],
   "baratineur": [
     "liar",
-    "bullshitter",
     "smooth talker"
   ],
   "baratineuse": [
     "liar",
-    "bullshitter",
     "smooth talker"
   ],
   "baratin": [
@@ -12762,23 +12732,12 @@
     "daubing",
     "defacement"
   ],
-  "barbouiller du papier": [
-    "to write drivel"
-  ],
   "barbouiller": [
     "to daub",
     "to smear",
     "to deface",
     "to besmear",
     "to scribble over"
-  ],
-  "barbouilleur": [
-    "dauber",
-    "bad writer"
-  ],
-  "barbouilleuse": [
-    "dauber",
-    "bad writer"
   ],
   "barbouillé de larmes": [
     "tear-stained"
@@ -12926,9 +12885,6 @@
   "barème": [
     "grading system",
     "marking system"
-  ],
-  "bas-bleu": [
-    "bluestocking"
   ],
   "bas-côté": [
     "aisle",
@@ -13492,12 +13448,6 @@
     "bellicose",
     "belligerent"
   ],
-  "bellâtre": [
-    "beau",
-    "clydesdale",
-    "pretty boy",
-    "glamour boy"
-  ],
   "bellérophon": [
     "Bellerophon"
   ],
@@ -13813,9 +13763,6 @@
   "bichkek": [
     "Bishkek"
   ],
-  "bicoque": [
-    "dump [little house]"
-  ],
   "bicyclette": [
     "bicycle"
   ],
@@ -14130,16 +14077,11 @@
   "bigorneau": [
     "winkle"
   ],
-  "bigoterie": [
-    "religiosity",
-    "religious bigotry"
-  ],
   "bigote": [
     "religious zealot"
   ],
   "bigot": [
-    "religious zealot",
-    "zealously religious"
+    "religious zealot"
   ],
   "bigoudi": [
     "curler"
@@ -14553,9 +14495,6 @@
     "Belarus",
     "Byelorussia"
   ],
-  "blablater": [
-    "to speak drivel"
-  ],
   "blafard": [
     "pale"
   ],
@@ -14573,13 +14512,10 @@
   ],
   "blaireau": [
     "badger",
-    "dork [idiot]",
     "shaving brush",
     "American badger",
-    "Eurasian badger"
-  ],
-  "blanc-bec": [
-    "greenhorn"
+    "Eurasian badger",
+    "European badger"
   ],
   "blanc cassé": [
     "off-white"
@@ -15074,9 +15010,6 @@
   "bon appétit": [
     "Enjoy your meal!"
   ],
-  "bonasse": [
-    "meek"
-  ],
   "bonbonne": [
     "oxygen cylinder"
   ],
@@ -15171,9 +15104,6 @@
   "bonhomme": [
     "snowman"
   ],
-  "boniche": [
-    "skivvy"
-  ],
   "bonifier": [
     "improve"
   ],
@@ -15265,9 +15195,6 @@
   ],
   "bonne volonté": [
     "good will"
-  ],
-  "bonniche": [
-    "skivvy"
   ],
   "bon ordre": [
     "proper sequence"
@@ -15618,9 +15545,6 @@
   "bouffe": [
     "grub [food]"
   ],
-  "bouffi (d'orgueil": [
-    "pompous [person]"
-  ],
   "bouffi": [
     "puffed up"
   ],
@@ -15882,7 +15806,6 @@
   "bourgeois": [
     "burgher",
     "bourgeois",
-    "middle-class",
     "middle class",
     "middle-class person"
   ],
@@ -16020,12 +15943,6 @@
     "knock into",
     "to bump into",
     "to knock over"
-  ],
-  "bouseuse": [
-    "country bumpkin"
-  ],
-  "bouseux": [
-    "country bumpkin"
   ],
   "bouse": [
     "cowpat",
@@ -16437,7 +16354,6 @@
     "pretzel [esp. Am.]"
   ],
   "breuvage": [
-    "brew",
     "beverage",
     "magic potion"
   ],
@@ -16459,9 +16375,8 @@
     "do-it-yourself <DIY>"
   ],
   "bricoler": [
-    "to tinker",
     "to do DIY",
-    "to knock sth. up",
+    "to tinker",
     "to do handicrafts"
   ],
   "bricoles": [
@@ -16981,8 +16896,7 @@
     "police brutality"
   ],
   "brute": [
-    "brute",
-    "animal [person]"
+    "brute"
   ],
   "brut": [
     "raw",
@@ -17322,11 +17236,11 @@
     "spoils"
   ],
   "butor": [
-    "boor",
     "bittern",
     "zigzag heron",
     "American bittern",
-    "pinnated bittern"
+    "pinnated bittern",
+    "Australasian bittern"
   ],
   "buts": [
     "purposes"
@@ -17701,8 +17615,6 @@
     "to slog away"
   ],
   "bûcheur": [
-    "nerd",
-    "swot",
     "wonk",
     "geek [esp. Am.]"
   ],
@@ -18019,12 +17931,7 @@
     "ham (actor)"
   ],
   "cabotin": [
-    "ham actress",
     "ham (actor)"
-  ],
-  "cabot": [
-    "ham actor",
-    "mutt [dog]"
   ],
   "cabrera": [
     "Cabrera Island"
@@ -18916,15 +18823,12 @@
     "duck",
     "drake",
     "mallard",
-    "comb duck",
+    "bath duck",
     "Cape teal"
   ],
   "canari": [
     "canary",
     "Canarian"
-  ],
-  "canasson": [
-    "horse"
   ],
   "canberra": [
     "Canberra"
@@ -20274,9 +20178,6 @@
   "catogan": [
     "ponytail",
     "(hair) bow"
-  ],
-  "catéchiser": [
-    "to indoctrinate"
   ],
   "catéchisme": [
     "catechism"
@@ -21777,10 +21678,6 @@
     "solar heating",
     "heat [heating]"
   ],
-  "chauffard": [
-    "road hog",
-    "reckless driver"
-  ],
   "chauffe-ballon": [
     "heating mantle"
   ],
@@ -22389,9 +22286,6 @@
   ],
   "chiot": [
     "puppy"
-  ],
-  "chipie": [
-    "cow"
   ],
   "chipiron": [
     "(small) octopus"
@@ -23068,7 +22962,6 @@
   "cinglé": [
     "crazy",
     "loony",
-    "lunatic",
     "oddball",
     "nut [loony]"
   ],
@@ -24145,7 +24038,6 @@
     "cast-iron stewpot"
   ],
   "coco": [
-    "bloke",
     "coco de mer",
     "sea coconut",
     "double coconut"
@@ -25359,7 +25251,6 @@
   ],
   "complaisance": [
     "kindness",
-    "indulgence",
     "complacency",
     "self-indulgence",
     "readiness to oblige"
@@ -28119,9 +28010,6 @@
     "replica",
     "hard copy"
   ],
-  "copinage": [
-    "cronyism"
-  ],
   "copiste": [
     "copyist"
   ],
@@ -28173,9 +28061,6 @@
     "vanity",
     "coquetry",
     "affectation"
-  ],
-  "coquette": [
-    "coquette"
   ],
   "coque": [
     "hull",
@@ -28352,8 +28237,7 @@
     "Horn of Africa"
   ],
   "corniaud": [
-    "mongrel",
-    "nitwit [idiot]"
+    "mongrel"
   ],
   "corniche": [
     "cornice"
@@ -28610,10 +28494,6 @@
   "coteau": [
     "hillside"
   ],
-  "coterie": [
-    "clique",
-    "circle [clique]"
-  ],
   "cote": [
     "height",
     "rating",
@@ -28817,9 +28697,6 @@
   "coulisser": [
     "to slide"
   ],
-  "coulissier": [
-    "stock-jobber"
-  ],
   "coulis": [
     "grouting"
   ],
@@ -28984,9 +28861,6 @@
   ],
   "courber l'échine devant": [
     "to submit to"
-  ],
-  "courber l'échine": [
-    "to kowtow"
   ],
   "courber la tête": [
     "to bow down"
@@ -30197,14 +30071,13 @@
     "skull",
     "gallant",
     "cranium",
-    "cocksure"
+    "bald head"
   ],
   "crâner avec": [
     "to brag about"
   ],
   "crânerie": [
-    "gallantry",
-    "swaggering"
+    "gallantry"
   ],
   "crâner": [
     "to show off"
@@ -30423,9 +30296,6 @@
   ],
   "crétineux": [
     "cretinous"
-  ],
-  "crétine": [
-    "chump"
   ],
   "crétinisme": [
     "cretinism"
@@ -31568,7 +31438,6 @@
     "excessively high"
   ],
   "d'une ignorance crasse": [
-    "pig-ignorant",
     "shamefully ignorant"
   ],
   "d'une largeur démesurée": [
@@ -31723,8 +31592,8 @@
   ],
   "dame": [
     "sir",
-    "dame",
     "lady",
+    "dame",
     "lord",
     "gentleman"
   ],
@@ -32118,9 +31987,6 @@
   ],
   "de ce côté": [
     "on this side"
-  ],
-  "de cet acabit": [
-    "of that sort"
   ],
   "de choix": [
     "choice"
@@ -34895,8 +34761,7 @@
   ],
   "divaguer": [
     "to rave",
-    "to ramble",
-    "to talk nonsense"
+    "to ramble"
   ],
   "divali": [
     "Diwali"
@@ -35491,9 +35356,6 @@
     "whose",
     "of which"
   ],
-  "donzelle": [
-    "young madam"
-  ],
   "don": [
     "gift",
     "talent",
@@ -35792,8 +35654,7 @@
   "douillet": [
     "cosy",
     "cozy",
-    "susceptible",
-    "soft [flabby]"
+    "susceptible"
   ],
   "douillette": [
     "quilted housecoat"
@@ -35832,8 +35693,7 @@
   "douteux": [
     "dodgy",
     "doubtful",
-    "dubious [suspect]",
-    "suspicious-looking"
+    "dubious [suspect]"
   ],
   "doute": [
     "doubt",
@@ -36167,9 +36027,6 @@
     "duchy",
     "dukedom [land]",
     "Duchy of Austria"
-  ],
-  "ducon": [
-    "bootlicker"
   ],
   "du coup": [
     "so",
@@ -38153,16 +38010,13 @@
     "tricky",
     "gentle",
     "dainty",
-    "fusspot"
+    "tactful"
   ],
   "délicatement": [
     "gently"
   ],
   "délicatesse": [
     "delicacy"
-  ],
-  "délicate": [
-    "fusspot"
   ],
   "délices": [
     "delights"
@@ -39769,7 +39623,6 @@
     "I am sorry."
   ],
   "désordonné": [
-    "ragtag",
     "untidy",
     "disorderly",
     "disordered",
@@ -42263,11 +42116,6 @@
   "en fuite": [
     "at large [escaped]"
   ],
-  "enfumage": [
-    "deception",
-    "disguising",
-    "obfuscation"
-  ],
   "enfumer": [
     "to confuse",
     "to smoke sth. out"
@@ -43008,9 +42856,6 @@
   "enrichissement": [
     "enrichment"
   ],
-  "enrichi": [
-    "nouveau riche"
-  ],
   "enrobé de chocolat": [
     "chocolated-coated"
   ],
@@ -43062,9 +42907,6 @@
   ],
   "en récompense de": [
     "as a reward for"
-  ],
-  "enrégimenter": [
-    "to press-gang"
   ],
   "enrégimenté": [
     "regimented"
@@ -43868,8 +43710,7 @@
     "tenacity",
     "persistence",
     "persistency",
-    "stubbornness",
-    "pigheadedness"
+    "stubbornness"
   ],
   "entêter": [
     "to make sb. giddy"
@@ -44781,12 +44622,6 @@
   ],
   "estropier": [
     "to cripple"
-  ],
-  "estropiée": [
-    "cripple [dated]"
-  ],
-  "estropié": [
-    "cripple [dated]"
   ],
   "estuaire": [
     "firth",
@@ -47149,9 +46984,6 @@
   "faire la quête": [
     "to raise funds"
   ],
-  "faire la roue": [
-    "to strut around"
-  ],
   "faire la récolte": [
     "to harvest"
   ],
@@ -48072,9 +47904,6 @@
   "falaise": [
     "cliff"
   ],
-  "falbalas": [
-    "frills and flounces"
-  ],
   "fallacieux": [
     "false",
     "elusive",
@@ -48686,10 +48515,6 @@
   "fax": [
     "fax"
   ],
-  "fayotter": [
-    "to crawl",
-    "to creep"
-  ],
   "fayot": [
     "creep",
     "crawler"
@@ -48739,9 +48564,6 @@
     "pretending",
     "idle [lazy]"
   ],
-  "feignasse": [
-    "lazybones"
-  ],
   "feijoa": [
     "feijoa"
   ],
@@ -48761,9 +48583,9 @@
   "femme": [
     "wife",
     "woman",
-    "female",
+    "floozy",
     "floosy",
-    "virago"
+    "female"
   ],
   "fendoir": [
     "cleaver"
@@ -49243,10 +49065,7 @@
   ],
   "fierté": [
     "pride",
-    "hubris",
-    "arrogance",
-    "pretension",
-    "haughtiness"
+    "undisguised pride"
   ],
   "fiesta": [
     "shindig"
@@ -49865,10 +49684,6 @@
   "flemmarder": [
     "to loaf around"
   ],
-  "flemmard": [
-    "bone idle",
-    "lazybones"
-  ],
   "fleurer": [
     "to smell of"
   ],
@@ -50179,8 +49994,7 @@
     "credence"
   ],
   "foldingue": [
-    "crazy",
-    "nutcase"
+    "crazy"
   ],
   "fol espoir": [
     "wild hope"
@@ -51262,8 +51076,7 @@
     "frank"
   ],
   "france": [
-    "France",
-    "provincial France"
+    "France"
   ],
   "francfort-sur-le-main": [
     "Frankfurt (am Main)"
@@ -51624,9 +51437,6 @@
   "frelon": [
     "hornet"
   ],
-  "freluquet": [
-    "little squirt"
-  ],
   "fresque": [
     "fresco",
     "fresco [painting]"
@@ -51747,9 +51557,6 @@
   ],
   "friponne": [
     "rascal"
-  ],
-  "fripouille": [
-    "rogue [villain]"
   ],
   "fripé": [
     "creased"
@@ -53957,9 +53764,6 @@
   "glanage": [
     "gleaning"
   ],
-  "glander": [
-    "do"
-  ],
   "glande": [
     "gland",
     "mammary gland",
@@ -54022,7 +53826,6 @@
   "glaçon": [
     "icicle",
     "ice cube",
-    "cold fish",
     "block of ice"
   ],
   "glaïeul": [
@@ -54231,15 +54034,8 @@
   "godille": [
     "scull"
   ],
-  "gogol": [
-    "spaz",
-    "spazzer"
-  ],
   "goguenard": [
     "mocking"
-  ],
-  "goinfre": [
-    "greedy pig"
   ],
   "goitre": [
     "goiter",
@@ -54439,9 +54235,7 @@
     "gouge"
   ],
   "goujat": [
-    "cad",
-    "boor",
-    "bounder"
+    "boor"
   ],
   "goujon": [
     "gudgeon"
@@ -56006,10 +55800,6 @@
   "guigne": [
     "rotten luck"
   ],
-  "guignol": [
-    "clown",
-    "joker"
-  ],
   "guilde": [
     "guild",
     "craftman's guild"
@@ -56265,9 +56055,6 @@
   "gâter": [
     "to mar",
     "to spoil [a child]"
-  ],
-  "gâteux": [
-    "senile"
   ],
   "gâtisme": [
     "senility"
@@ -56976,11 +56763,9 @@
   "handicapé": [
     "disabled",
     "handicapped",
-    "spastic [dated]",
     "handicapped person"
   ],
   "handicapée": [
-    "spastic [dated]",
     "handicapped person"
   ],
   "handicapé physique": [
@@ -59050,12 +58835,6 @@
   "hâblerie": [
     "bragging"
   ],
-  "hâbleur": [
-    "boaster",
-    "boastful",
-    "braggard",
-    "pretentious"
-  ],
   "hâler": [
     "to tan"
   ],
@@ -59388,7 +59167,6 @@
   ],
   "hétéroclite": [
     "motley",
-    "ragtag",
     "miscellaneous",
     "heterogeneous"
   ],
@@ -59615,11 +59393,6 @@
   ],
   "igname": [
     "yam"
-  ],
-  "ignare": [
-    "ignorant",
-    "benighted",
-    "ignoramus"
   ],
   "ignoble": [
     "vile"
@@ -62780,9 +62553,6 @@
     "insipid",
     "tasteless"
   ],
-  "insipid": [
-    "plastic [food]"
-  ],
   "insistance": [
     "urgency",
     "insistence",
@@ -65071,8 +64841,7 @@
   "jaune": [
     "yolk",
     "yellow",
-    "egg yolk",
-    "scab [strikebreaker]"
+    "egg yolk"
   ],
   "jaunissement": [
     "yellowing",
@@ -67230,9 +66999,6 @@
   "la ramener": [
     "to show off"
   ],
-  "larbin": [
-    "dogsbody"
-  ],
   "larcin": [
     "theft",
     "larceny"
@@ -67495,10 +67261,8 @@
     "to wash"
   ],
   "lavette": [
-    "wimp",
     "dishrag",
-    "dishcloth",
-    "wet [wimp]"
+    "dishcloth"
   ],
   "laveur": [
     "cleaner"
@@ -68968,11 +68732,11 @@
     "literal"
   ],
   "littérature": [
-    "waffle",
-    "literature",
     "nonfiction",
+    "literature",
     "non-fiction",
-    "fiction books"
+    "fiction books",
+    "detective stories"
   ],
   "lituanien": [
     "Lithuanian"
@@ -70114,12 +69878,6 @@
     "cowardly act",
     "spinelessness"
   ],
-  "lâcheur": [
-    "quitter"
-  ],
-  "lâcheuse": [
-    "quitter"
-  ],
   "lèche-bottes": [
     "bootlicker"
   ],
@@ -70294,8 +70052,7 @@
   ],
   "légume": [
     "pulse",
-    "vegetable",
-    "vegetable [comatose]"
+    "vegetable"
   ],
   "légèrement blessé": [
     "slightly injured"
@@ -70566,9 +70323,6 @@
   ],
   "maffioso": [
     "mafioso"
-  ],
-  "mafflu": [
-    "chubby-cheeked"
   ],
   "ma foi": [
     "Well!",
@@ -71531,9 +71285,6 @@
   "mandarinier": [
     "mandarin (orange)"
   ],
-  "mandarin": [
-    "mandarin"
-  ],
   "mandataire": [
     "proxy",
     "agent",
@@ -71751,7 +71502,6 @@
   ],
   "manipulateur": [
     "technician",
-    "manipulator",
     "manipulative"
   ],
   "manipulations": [
@@ -72022,8 +71772,7 @@
     "scale model"
   ],
   "maquignonnage": [
-    "horse dealing",
-    "sharp practice"
+    "horse dealing"
   ],
   "maquignonne": [
     "horse dealer",
@@ -72033,12 +71782,10 @@
   "maquignon": [
     "horse dealer",
     "cattle dealer",
-    "shady operator",
     "livestock dealer"
   ],
   "maquillage": [
     "make-up",
-    "doctoring",
     "greasepaint [makeup]"
   ],
   "maquiller": [
@@ -72858,9 +72605,6 @@
   "mater une révolte": [
     "to crush a revolt"
   ],
-  "mateur": [
-    "ogler"
-  ],
   "mathématique": [
     "mathematical"
   ],
@@ -73125,11 +72869,6 @@
     "mallow",
     "hollyhock"
   ],
-  "mauviette": [
-    "drip",
-    "wimp",
-    "softie"
-  ],
   "maux": [
     "aches",
     "pains",
@@ -73340,12 +73079,6 @@
   "mendigoter": [
     "to beg"
   ],
-  "mendigote": [
-    "beggar"
-  ],
-  "mendigot": [
-    "beggar"
-  ],
   "mendélévium": [
     "mendelevium <Md>"
   ],
@@ -73473,10 +73206,6 @@
     "minor",
     "slender"
   ],
-  "mercantile": [
-    "mercenary",
-    "mercantile"
-  ],
   "mercenaire": [
     "mercenary"
   ],
@@ -73594,7 +73323,6 @@
   ],
   "mesquin": [
     "miserly",
-    "petty [mean]",
     "mean [miserly]"
   ],
   "messagerie": [
@@ -74304,7 +74032,7 @@
     "crummy",
     "pitiful",
     "pathetic",
-    "measly [paltry]"
+    "pathetic character"
   ],
   "minaret": [
     "minaret"
@@ -75083,16 +74811,6 @@
   "molesquine": [
     "moleskin"
   ],
-  "mollassonne": [
-    "slowpoke",
-    "slowcoach"
-  ],
-  "mollasson": [
-    "sluggish",
-    "slowpoke",
-    "slowcoach",
-    "bloody lethargic"
-  ],
   "mollement": [
     "idly",
     "gently",
@@ -75228,9 +74946,6 @@
   ],
   "mongolie": [
     "Mongolia"
-  ],
-  "mongolisme": [
-    "mongolism [dated]"
   ],
   "mongol": [
     "Mongol",
@@ -76000,7 +75715,7 @@
     "soft",
     "flabby",
     "gutless",
-    "listless"
+    "sluggish"
   ],
   "mouillage": [
     "wetting",
@@ -76224,9 +75939,6 @@
   "moyen âge": [
     "Middle Ages",
     "High Middle Ages"
-  ],
-  "moyenâgeux": [
-    "mediaeval"
   ],
   "mozambicaine": [
     "Mozambican"
@@ -77065,11 +76777,6 @@
     "pharmaceutical",
     "remedy [medicine]"
   ],
-  "médicastre": [
-    "charlatan",
-    "quack doctor",
-    "quack [quack doctor]"
-  ],
   "médication": [
     "medication"
   ],
@@ -77216,12 +76923,6 @@
   ],
   "méga": [
     "mega [huge]"
-  ],
-  "mégère": [
-    "nag",
-    "harpy",
-    "shrew",
-    "vixen"
   ],
   "méiose": [
     "meiosis"
@@ -77739,9 +77440,6 @@
     "subway",
     "underground"
   ],
-  "métèque": [
-    "foreigner"
-  ],
   "météo-sensibilité": [
     "weather sensitivity"
   ],
@@ -77906,12 +77604,6 @@
     "nabob",
     "mogul"
   ],
-  "nabote": [
-    "dwarf"
-  ],
-  "nabot": [
-    "dwarf"
-  ],
   "nacelle": [
     "gondola",
     "carrier",
@@ -77950,11 +77642,9 @@
   ],
   "nain": [
     "dwarf",
-    "midget",
     "garden gnome"
   ],
   "naine": [
-    "midget",
     "red dwarf [star]"
   ],
   "nairobi": [
@@ -78046,8 +77736,7 @@
     "ground water"
   ],
   "narcisse": [
-    "narcissus",
-    "narcissist"
+    "narcissus"
   ],
   "narcissique": [
     "narcissistic"
@@ -78303,7 +77992,6 @@
   ],
   "naïve": [
     "innocent",
-    "gullible fool",
     "naïve painter"
   ],
   "ne ... guère": [
@@ -79490,8 +79178,7 @@
     "rice vermicelli"
   ],
   "nouille": [
-    "noodle",
-    "berk [stupid person]"
+    "noodle"
   ],
   "nounou": [
     "nanny [childminder]"
@@ -79819,9 +79506,9 @@
   "nullité": [
     "duffer",
     "bummer",
-    "nothing",
+    "clunker",
     "nullity",
-    "clunker"
+    "nonentity"
   ],
   "nullième partie de": [
     "zero part of"
@@ -80252,7 +79939,6 @@
     "kidney specialist"
   ],
   "népotisme": [
-    "cronyism",
     "nepotism",
     "favoritism",
     "favouritism",
@@ -80310,7 +79996,6 @@
     "Bernese Oberland"
   ],
   "objecteur": [
-    "draft dodger",
     "draft resister"
   ],
   "objectif": [
@@ -83235,10 +82920,6 @@
     "dad",
     "daddy"
   ],
-  "papelard": [
-    "smarmy",
-    "hypocrite"
-  ],
   "paperasserie": [
     "red tape",
     "paperwork"
@@ -84625,9 +84306,6 @@
   "parvenir à un accord": [
     "to achieve agreement"
   ],
-  "parvenu": [
-    "upstart"
-  ],
   "parvis": [
     "forecourt"
   ],
@@ -85100,7 +84778,6 @@
     "pore-cleansing strip"
   ],
   "patelin": [
-    "ingratiating",
     "small village"
   ],
   "patente": [
@@ -85425,9 +85102,6 @@
   "paysagiste": [
     "landscape artist",
     "landscape painter"
-  ],
-  "paysanne": [
-    "peasant"
   ],
   "paysan": [
     "farmer",
@@ -86466,7 +86140,6 @@
     "butter biscuit"
   ],
   "petit-bourgeois": [
-    "petit bourgeois",
     "lower middle class"
   ],
   "petit-duc": [
@@ -86861,11 +86534,11 @@
     "to populate"
   ],
   "peuple": [
-    "common",
     "people",
     "village",
     "Visigoths",
-    "people [nation]"
+    "people [nation]",
+    "nation [people]"
   ],
   "peuplier": [
     "abele",
@@ -87427,9 +87100,6 @@
   "pickpocket": [
     "pickpocket"
   ],
-  "picoler": [
-    "to booze"
-  ],
   "picorer": [
     "to nibble"
   ],
@@ -87528,8 +87198,7 @@
   ],
   "pieuvre": [
     "octopus",
-    "blanket octopus",
-    "apparatus of power"
+    "blanket octopus"
   ],
   "pieux": [
     "pious"
@@ -87767,11 +87436,7 @@
     "penguin"
   ],
   "pingre": [
-    "stingy",
-    "skinflint",
-    "tightfisted",
-    "mean [stingy]",
-    "penny-pincher"
+    "mingy [miserly]"
   ],
   "pinson": [
     "finch",
@@ -87863,9 +87528,6 @@
     "sharp",
     "biting",
     "pungent"
-  ],
-  "pique-assiette": [
-    "sponger"
   ],
   "pique-nique": [
     "picnic"
@@ -88127,8 +87789,7 @@
     "foothills"
   ],
   "piétaille": [
-    "infantry",
-    "riff-raff"
+    "infantry"
   ],
   "piétinement": [
     "stamping",
@@ -88342,7 +88003,6 @@
   ],
   "plaisantin": [
     "prankster",
-    "fake [phoney]",
     "practical joker"
   ],
   "planant": [
@@ -88861,9 +88521,7 @@
     "concrete block"
   ],
   "plouc": [
-    "hick",
-    "dowdy",
-    "yokel"
+    "dowdy"
   ],
   "plouf": [
     "plop [on water]"
@@ -89050,7 +88708,6 @@
     "plaster of Paris"
   ],
   "plèbe": [
-    "riffraff",
     "plebeians"
   ],
   "plèvre": [
@@ -90454,7 +90111,6 @@
   ],
   "pote": [
     "dude",
-    "crony",
     "mate [friend]"
   ],
   "potier": [
@@ -90772,9 +90428,9 @@
   "pourriture": [
     "rot",
     "decay",
-    "swine",
     "noble rot",
-    "rottenness"
+    "rottenness",
+    "dry rot [in wood]"
   ],
   "pour s'amuser": [
     "for fun"
@@ -94042,8 +93698,7 @@
   ],
   "puant": [
     "smelly",
-    "stinking",
-    "pompous [person]"
+    "stinking"
   ],
   "pubis": [
     "pubis"
@@ -94585,9 +94240,7 @@
   ],
   "pète-sec": [
     "abrupt",
-    "tyrant",
-    "high-handed",
-    "abrupt person"
+    "high-handed"
   ],
   "péage": [
     "toll",
@@ -95656,9 +95309,6 @@
   "quelle sera la suite": [
     "What's next?"
   ],
-  "quel mollasson": [
-    "He's so slow!"
-  ],
   "quelqu'un d'autre": [
     "someone else"
   ],
@@ -96115,9 +95765,6 @@
     "to keep repeating",
     "to keep harping (on)"
   ],
-  "racaille": [
-    "low life"
-  ],
   "raccommoder": [
     "to mend"
   ],
@@ -96217,9 +95864,6 @@
   "raclette": [
     "raclette"
   ],
-  "raclure": [
-    "louse"
-  ],
   "raclée": [
     "licking",
     "drubbing",
@@ -96292,8 +95936,7 @@
   ],
   "radin": [
     "stingy",
-    "tightfisted",
-    "tight [miserly]"
+    "tightfisted"
   ],
   "radio-opaque": [
     "radiopaque"
@@ -98204,9 +97847,6 @@
     "to spurn",
     "to defeat"
   ],
-  "rejeton": [
-    "offspring"
-  ],
   "rejets": [
     "pollutants",
     "toxic waste {sg}"
@@ -99942,8 +99582,7 @@
     "restriction"
   ],
   "resucée": [
-    "rehash",
-    "regurgitation"
+    "rehash"
   ],
   "retable": [
     "altarpiece"
@@ -100466,9 +100105,6 @@
   ],
   "ribambelle": [
     "swarm"
-  ],
-  "ricain": [
-    "Yankee"
   ],
   "ricanement": [
     "giggle"
@@ -101271,8 +100907,7 @@
   ],
   "rosse": [
     "nag",
-    "mean",
-    "meanie"
+    "mean"
   ],
   "rossignol": [
     "leftovers",
@@ -101872,7 +101507,6 @@
   ],
   "rustre": [
     "boor",
-    "lout",
     "boorish",
     "uncouth"
   ],
@@ -101949,8 +101583,7 @@
     "groan"
   ],
   "râleur": [
-    "nagging",
-    "complainer"
+    "nagging"
   ],
   "râle": [
     "rale",
@@ -101983,8 +101616,7 @@
   "râtelier": [
     "bit",
     "hayrack",
-    "pipe rack",
-    "set of teeth"
+    "pipe rack"
   ],
   "règlement": [
     "rule",
@@ -102440,8 +102072,8 @@
     "reduced",
     "hideout",
     "cut-down",
-    "cubbyhole",
-    "tiny room"
+    "tiny room",
+    "scaled-down"
   ],
   "réel": [
     "real",
@@ -105260,9 +104892,6 @@
   "s'inscrire à un club": [
     "to join a club"
   ],
-  "s'insinuer auprès de": [
-    "to curry favour with"
-  ],
   "s'insinuer dans": [
     "to seep into"
   ],
@@ -106223,10 +105852,6 @@
     "wage-earning",
     "salaried employee"
   ],
-  "sale gosse": [
-    "snotty brat",
-    "snotty-nosed brat"
-  ],
   "salement": [
     "badly",
     "seriously"
@@ -106248,8 +105873,8 @@
     "dirt",
     "filth",
     "baseness",
-    "dirtiness",
-    "junk food"
+    "junk food",
+    "dirtiness"
   ],
   "salicylique": [
     "salicylic"
@@ -106298,9 +105923,6 @@
   ],
   "saltation": [
     "saltation"
-  ],
-  "saltimbanque": [
-    "entertainer"
   ],
   "saltique": [
     "zebra (back) spider"
@@ -106827,7 +106449,6 @@
   ],
   "sans nuance": [
     "clearcut",
-    "unsubtle",
     "unreservedly",
     "straightforward"
   ],
@@ -107695,9 +107316,6 @@
   "saül": [
     "Saul"
   ],
-  "sbire": [
-    "henchman"
-  ],
   "scabieuse": [
     "bluebutton",
     "gypsy rose",
@@ -108252,9 +107870,6 @@
   "se camoufler": [
     "to hide"
   ],
-  "se caser": [
-    "to get married"
-  ],
   "se casser la figure": [
     "to fall down"
   ],
@@ -108791,9 +108406,6 @@
   ],
   "se donner du mal": [
     "to make an effort"
-  ],
-  "se donner en spectacle": [
-    "to flaunt oneself"
   ],
   "se doter de": [
     "to create",
@@ -110720,7 +110332,6 @@
     "to complain that ..."
   ],
   "se plaindre": [
-    "to whinge",
     "to complain"
   ],
   "se plaindre à": [
@@ -111585,7 +111196,6 @@
   ],
   "sermon": [
     "sermon",
-    "lecture",
     "Sermon on the Mount"
   ],
   "se rompre": [
@@ -112713,11 +112323,11 @@
     "straightforwardness"
   ],
   "simulacre": [
-    "sham",
     "pretense",
     "air kiss",
     "simulation",
-    "mock trial"
+    "mock trial",
+    "simulacrum"
   ],
   "simulateur": [
     "faker",
@@ -113136,9 +112746,6 @@
   ],
   "socialiste": [
     "socialist"
-  ],
-  "socialo": [
-    "social democrat"
   ],
   "social": [
     "social"
@@ -113943,20 +113550,14 @@
   "sot": [
     "fool",
     "silly",
-    "nitwit",
-    "asinine",
-    "pinhead"
+    "asinine"
   ],
   "sottement": [
     "stupidly",
     "foolishly"
   ],
   "sotte": [
-    "fool",
-    "nitwit",
-    "pinhead",
-    "blockhead",
-    "numbskull"
+    "fool"
   ],
   "sottise": [
     "silliness",
@@ -114194,10 +113795,6 @@
   "souiller": [
     "soil",
     "to soil"
-  ],
-  "souillon": [
-    "fleabag",
-    "slattern"
   ],
   "souillure": [
     "blot",
@@ -114449,10 +114046,10 @@
   ],
   "sournois": [
     "sly",
-    "sneak",
     "sneaky",
     "devious",
-    "scheming"
+    "scheming",
+    "conniving"
   ],
   "sournoisement": [
     "slyly",
@@ -114466,7 +114063,6 @@
     "underhand trick"
   ],
   "sournoise": [
-    "sneak",
     "sly person",
     "sly character",
     "underhand person"
@@ -118519,9 +118115,6 @@
     "tattooed",
     "tattooed person"
   ],
-  "taudis": [
-    "hovel"
-  ],
   "taule": [
     "nick [prison]"
   ],
@@ -119198,10 +118791,6 @@
   "terriblement": [
     "awfully",
     "terribly"
-  ],
-  "terrien": [
-    "countryman",
-    "earthling; landowner"
   ],
   "terrier": [
     "burrow [of rabbit]"
@@ -121869,18 +121458,6 @@
     "drawing",
     "tracing"
   ],
-  "traînarde": [
-    "slowcoach",
-    "straggler"
-  ],
-  "traînard": [
-    "sluggish",
-    "slowcoach",
-    "straggler"
-  ],
-  "traînasser": [
-    "to loaf about"
-  ],
   "traîneau": [
     "sled",
     "sleigh",
@@ -122116,7 +121693,6 @@
   ],
   "tribu": [
     "tribe",
-    "ragtag",
     "sigma-field",
     "Indian tribe",
     "sigma algebra"
@@ -122424,9 +122000,7 @@
     "paper clip"
   ],
   "trompe-l'œil": [
-    "snow job",
-    "trompe l'oeil",
-    "window dressing"
+    "trompe l'oeil"
   ],
   "tromperie": [
     "deception"
@@ -124350,9 +123924,6 @@
   "vaincue": [
     "defeated person"
   ],
-  "vain mot": [
-    "empty word"
-  ],
   "vainqueur": [
     "victor",
     "winner",
@@ -124824,11 +124395,9 @@
     "voodoo"
   ],
   "vaurienne": [
-    "lout",
     "rascal"
   ],
   "vaurien": [
-    "lout",
     "rascal"
   ],
   "vautour": [
@@ -127061,10 +126630,10 @@
   ],
   "vulgaire": [
     "trite",
-    "rabble",
-    "vulgar",
     "common",
-    "popular"
+    "vulgar",
+    "popular",
+    "ordinary"
   ],
   "vulgairement": [
     "crudely [vulgarly]"
@@ -127626,12 +127195,6 @@
   "yougoslave": [
     "Yugoslav",
     "Yugoslavian"
-  ],
-  "youpins": [
-    "yids [pej. for Jews]"
-  ],
-  "youpin": [
-    "yid [Jew]"
   ],
   "yprois": [
     "of Ypres",
@@ -129661,12 +129224,8 @@
   ],
   "écervelé": [
     "empty-headed",
-    "featherbrain",
     "featherbrained",
     "scatterbrained"
-  ],
-  "écervelée": [
-    "featherbrain"
   ],
   "échafaudage": [
     "scaffolding"
@@ -130262,9 +129821,6 @@
   ],
   "écrire avec application": [
     "to write with care"
-  ],
-  "écrire des tartines": [
-    "to write reams"
   ],
   "écrire un papier": [
     "to write a paper"
@@ -130886,9 +130442,6 @@
   "élucidation": [
     "elucidation"
   ],
-  "élucubrations": [
-    "pipe dreams"
-  ],
   "éludant": [
     "evading"
   ],
@@ -131314,11 +130867,11 @@
     "spaniel"
   ],
   "épais": [
+    "dull",
     "much",
     "deep",
-    "dull",
-    "a lot",
-    "thick"
+    "dense",
+    "bulky"
   ],
   "épaisse couche": [
     "deep layer of snow"
@@ -132735,13 +132288,6 @@
   "évaporer": [
     "to vanish",
     "to evaporate"
-  ],
-  "évaporée": [
-    "birdbrain"
-  ],
-  "évaporé": [
-    "giddy",
-    "birdbrain"
   ],
   "évasif": [
     "evasive",
@@ -134278,7 +133824,6 @@
     "to measure up"
   ],
   "être à la masse": [
-    "to be bonkers",
     "to be crackers"
   ],
   "être à la porte": [
@@ -136146,6 +135691,9 @@
   ],
   "aggloméré": [
     "masonite"
+  ],
+  "accoutrement": [
+    "outfit"
   ],
   "antériorité": [
     "precedence"
@@ -142909,6 +142457,9 @@
   "méditerranéen": [
     "mediterranean"
   ],
+  "mercantile": [
+    "mercantile"
+  ],
   "minimal": [
     "minimal",
     "minimum"
@@ -144087,6 +143638,9 @@
     "hesitate",
     "to doubt"
   ],
+  "affubler": [
+    "dress"
+  ],
   "inonder": [
     "drown",
     "flood",
@@ -144722,6 +144276,9 @@
   "diversifier": [
     "to vary",
     "diversify"
+  ],
+  "glander": [
+    "do"
   ],
   "dramatiser": [
     "dramatize"
@@ -145561,6 +145118,10 @@
   ],
   "libre-échange": [
     "free trade"
+  ],
+  "terrien": [
+    "countryman",
+    "earthling; landowner"
   ],
   "sécuritaire": [
     "safe"

@@ -24,6 +24,10 @@ CSV.foreach(cc_dict_file, col_sep: "\t", headers: false) do |row|
 
   next unless data_started
 
+  if french.match?(/péj\W/) || english.match?(/pej\W/)
+    next
+  end
+
   french.gsub!('(qc.)', '')
   french.gsub!('(qn./qc.)', '')
   french.gsub!(/^\([^\)]*\)/, '')

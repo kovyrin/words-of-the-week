@@ -5,9 +5,11 @@ require 'csv'
 require 'pry'
 
 class MergedDict
-  attr_reader :dict
+  attr_reader :dict, :en_bad_words, :fr_bad_words
 
-  def initialize
+  def initialize(en_bad_words, fr_bad_words)
+    @en_bad_words = en_bad_words
+    @fr_bad_words = fr_bad_words
     @dict = Hash.new { |h, k| h[k] = [] }
   end
 
@@ -16,13 +18,22 @@ class MergedDict
     dict[word] += Array(translations)
   end
 
+  def includes_bad_words?(word)
+    return false unless word
+    return true if word.match?('sex')
+    word_terms = word.split(/[^A-zÀ-ú0-9]+/)
+    (word_terms & fr_bad_words).any? || (word_terms & en_bad_words).any?
+  end
+
   def remove_words(words)
-    words.each do |word|
-      dict.delete(word)
+    dict.delete_if do |word, translations|
+      includes_bad_words?(word)
     end
 
     dict.each do |word, translations|
-      translations.reject! { |t| words.include?(t) }
+      translations.reject! do |t|
+        includes_bad_words?(t)
+      end
     end
   end
 
@@ -38,22 +49,17 @@ class MergedDict
   end
 end
 
-apertium_dict_file = 'dicts/apertium-fra-eng.fra-eng.json'
-dictcc_dict_file = 'dicts/dict.cc.fr-en.json'
-top1000_dict_file = 'dicts/top-1000.csv'
-top5000_dict_file = 'dicts/5000_wordlist_french.csv'
-bad_words_file = 'dicts/bad-words.txt'
-
 # Merge both dicts, keeping only the 5 shortest translations for each word
-apertium_dict = JSON.parse(File.read(apertium_dict_file))
-dictcc_dict = JSON.parse(File.read(dictcc_dict_file))
-top1000_dict = CSV.read(top1000_dict_file, col_sep: ',', headers: true)
-top5000_dict = CSV.read(top5000_dict_file, col_sep: ',', headers: true)
+apertium_dict = JSON.parse(File.read('dicts/apertium-fra-eng.fra-eng.json'))
+dictcc_dict = JSON.parse(File.read('dicts/dict.cc.fr-en.json'))
+top1000_dict = CSV.read('dicts/top-1000.csv', col_sep: ',', headers: true)
+top5000_dict = CSV.read('dicts/5000_wordlist_french.csv', col_sep: ',', headers: true)
 
 # Load the list of known bad words
-bad_words = File.readlines(bad_words_file).map(&:downcase).map(&:strip)
+bad_words_en = File.readlines('dicts/bad-words.txt').map(&:downcase).map(&:strip).uniq.reject(&:empty?)
+bad_words_fr = File.readlines('dicts/french-swear-words.txt').map(&:downcase).map(&:strip).uniq.reject(&:empty?)
 
-dict = MergedDict.new
+dict = MergedDict.new(bad_words_en, bad_words_fr)
 dictcc_dict.each do |word, translations|
   dict.add(word, translations)
 end
@@ -70,11 +76,12 @@ top_words = []
 top5000_dict.each do |row|
   translations = row['word_en'].split(',').map(&:strip)
   dict.add(row['word_fr'], translations)
-  top_words << row['word_fr']
+  top_words << row['word_fr'] unless dict.includes_bad_words?(row['word_fr'])
 end
 
 # Remove bad words
-dict.remove_words(bad_words)
+dict.remove_words(bad_words_en)
+dict.remove_words(bad_words_fr)
 
 # Write the merged dict to a file
 File.open('src/fra-eng.json', 'w') do |f|

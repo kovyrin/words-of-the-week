@@ -14,6 +14,7 @@ class MergedDict
   end
 
   def add(word, translations)
+    return if word.empty?
     word = word.downcase
     dict[word] += Array(translations)
   end
@@ -39,8 +40,8 @@ class MergedDict
 
   def compact
     compact_dict = {}
-    dict.each do |word, translations|
-      compacted = translations.compact.uniq.sort_by!(&:length)
+    dict.keys.sort.each do |word|
+      compacted = dict[word].compact.uniq.sort_by!(&:length)
       compacted.reject! { |t| t.split(' ').count > 4 || t.length > 20 }
       next if compacted.empty?
       compact_dict[word] = compacted[0..4]

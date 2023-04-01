@@ -52,6 +52,30 @@ class Dictionary {
     return word;
   }
 
+  // Singularize a given French word
+  toSingular(noun) {
+    const lowerNoun = noun.toLowerCase();
+    const length = lowerNoun.length;
+
+    if (length > 3 && lowerNoun.endsWith('aux')) {
+      return noun.slice(0, -1) + 'l';
+    } else if (length > 2 && lowerNoun.endsWith('s')) {
+      if (lowerNoun.endsWith('ss')) {
+        return noun; // Nouns ending in -ss, e.g., "fosses" remain unchanged in singular form
+      } else {
+        return noun.slice(0, -1);
+      }
+    } else if (length > 2 && lowerNoun.endsWith('x')) {
+      if (lowerNoun.endsWith('oux')) {
+        return noun.slice(0, -2) + 'u';
+      } else {
+        return noun.slice(0, -1);
+      }
+    } else {
+      return noun;
+    }
+  }
+
   translate(word) {
     if (word === "" || word === undefined || word === null) return [];
 
@@ -60,7 +84,17 @@ class Dictionary {
 
     // Strip article, etc and re-check
     const cleanWord = this.normalizeWord(word);
-    return frenchDict[cleanWord] || [];
+    if (frenchDict[cleanWord]) return frenchDict[cleanWord];
+
+    // Try to singularize and re-check
+    const singularWord = this.toSingular(cleanWord);
+    if (frenchDict[singularWord]) {
+      // "Add (plural) to the end of the translation
+      return frenchDict[singularWord].map(translation => `${translation} (plural)`);
+    }
+
+    // No match
+    return [];
   }
 
   suggest(word) {

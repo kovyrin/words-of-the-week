@@ -3,8 +3,13 @@ import topWords from './top-5000.json';
 
   // Articles, etc we do not want to consider during lookup
 const removeWords = [
-  'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'd\'', 'l\'', 'se',
+  'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'se'
 ];
+
+// Prefixes we do not want to consider during lookup
+const removePrefixes = [
+  'd\'', 'l\'', 's\''
+]
 
 // Removes accents from a word
 function removeAccents(word) {
@@ -37,6 +42,11 @@ class Dictionary {
     // Remove words
     removeWords.forEach(removeWord => {
       word = word.replace(new RegExp(`^${removeWord} `), '');
+    });
+
+    // Remove prefixes
+    removePrefixes.forEach(removePrefix => {
+      word = word.replace(new RegExp(`^${removePrefix}`), '');
     });
 
     return word;

@@ -81,6 +81,7 @@ function Training({words, voice, setVoice, dictionary}) {
     if (words.length > 20) {
       words = words.sort(() => Math.random() - 0.5).slice(0, 20);
     }
+    words = words.sort(() => Math.random() - 0.5); // Shuffle the words
     setAllTrainingWords(words);
     setRemainingTrainingWords(words);
     setTrainingStarted(true);

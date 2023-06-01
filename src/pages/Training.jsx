@@ -10,6 +10,7 @@ function Training({words, voice, setVoice, dictionary}) {
   const speaker = useMemo(() => new FrenchSpeaker(voice), [voice]);
 
   // State for keeping the list of words to train
+  const [previousTrainingWords, setPreviousTrainingWords] = React.useState([]);
   const [remainingTrainingWords, setRemainingTrainingWords] = React.useState([]);
   const [allTrainingWords, setAllTrainingWords] = React.useState([]);
   const [trainingStarted, setTrainingStarted] = React.useState(false);
@@ -31,8 +32,22 @@ function Training({words, voice, setVoice, dictionary}) {
   }
 
   function nextClicked() {
+    const previousTrainingWordsCopy = [...previousTrainingWords];
+    previousTrainingWordsCopy.push(getCurrentWord());
+    setPreviousTrainingWords(previousTrainingWordsCopy);
+
     const newTrainingWords = [...remainingTrainingWords];
     newTrainingWords.shift();
+    setRemainingTrainingWords(newTrainingWords);
+  }
+
+  function backClicked() {
+    const previousTrainingWordsCopy = [...previousTrainingWords];
+    const lastWord = previousTrainingWordsCopy.pop();
+    setPreviousTrainingWords(previousTrainingWordsCopy);
+
+    const newTrainingWords = [...remainingTrainingWords];
+    newTrainingWords.unshift(lastWord);
     setRemainingTrainingWords(newTrainingWords);
   }
 
@@ -57,6 +72,10 @@ function Training({words, voice, setVoice, dictionary}) {
         </div>
 
         <div className="tools">
+        <div className="tool">
+            <button onClick={backClicked} className="pure-button">Back</button>
+          </div>
+
           <div className="tool">
             <button onClick={repeatClicked} className="pure-button">Repeat</button>
           </div>
@@ -85,6 +104,7 @@ function Training({words, voice, setVoice, dictionary}) {
     setAllTrainingWords(words);
     setRemainingTrainingWords(words);
     setTrainingStarted(true);
+    setPreviousTrainingWords([]);
   }
 
   function startTrainingTop(n) {

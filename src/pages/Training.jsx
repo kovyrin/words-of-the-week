@@ -15,7 +15,6 @@ function Training({words, voice, setVoice, dictionary}) {
   const [allTrainingWords, setAllTrainingWords] = React.useState([]);
   const [trainingStarted, setTrainingStarted] = React.useState(false);
 
-
   // Play the first word when the training starts
   useEffect(() => {
     const currentWord = remainingTrainingWords[0];
@@ -72,8 +71,14 @@ function Training({words, voice, setVoice, dictionary}) {
         </div>
 
         <div className="tools">
-        <div className="tool">
-            <button onClick={backClicked} className="pure-button">Back</button>
+          <div className="tool">
+            <button
+              onClick={backClicked}
+              className="pure-button"
+              disabled={previousTrainingWords.length === 0}
+            >
+              Back
+            </button>
           </div>
 
           <div className="tool">
@@ -83,17 +88,16 @@ function Training({words, voice, setVoice, dictionary}) {
           <div className="tool">
             <button onClick={nextClicked} className="pure-button">Next</button>
           </div>
-
-          <div className="tool">
-            <button onClick={finishClicked} className="pure-button">Finish</button>
-          </div>
         </div>
+
+        <button onClick={finishClicked} className="finish-button pure-button">Finish</button>
       </div>
     );
   }
 
   function retryClicked() {
     setRemainingTrainingWords(allTrainingWords);
+    setPreviousTrainingWords([]);
   }
 
   function startTraining(words) {

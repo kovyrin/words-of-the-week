@@ -51,3 +51,8 @@
 .pure-button {
   border: 1px solid #777 !important;
 }
+
+.finish-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

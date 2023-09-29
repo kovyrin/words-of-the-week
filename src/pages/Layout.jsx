@@ -1,11 +1,12 @@
 import React from "react";
-import {Outlet} from "react-router-dom";
+import {Outlet, Link} from "react-router-dom";
+
 
 const Layout = () => {
   return (
     <div className="App">
       <div className="App-header">
-        Words of the Week
+        <Link to="/words-of-the-week/" class="App-link">Words of the Week</Link>
       </div>
 
       <Outlet />

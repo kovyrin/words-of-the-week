@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
-import VoiceSelector from '../components/VoiceSelector';
-import FrenchSpeaker from '../FrenchSpeaker';
+import VoiceSelector from '../../components/VoiceSelector';
+import FrenchSpeaker from '../../lib/FrenchSpeaker';
 
 import './Training.css';
 
-function Training({words, voice, setVoice, dictionary}) {
+function FrenchTraining({words, voice, setVoice, dictionary}) {
   const speaker = useMemo(() => new FrenchSpeaker(voice), [voice]);
 
   // State for keeping the list of words to train
@@ -126,7 +126,7 @@ function Training({words, voice, setVoice, dictionary}) {
           </div>
 
           <div className="tool">
-            <Link to='/words-of-the-week' className="pure-button">Finish</Link>
+            <Link to='..' className="pure-button">Finish</Link>
           </div>
         </div>
       </div>
@@ -158,7 +158,7 @@ function Training({words, voice, setVoice, dictionary}) {
             <button className="pure-button" onClick={() => startTrainingTop(5000)}>Top-5000</button>
           </li>
           <li>
-            <Link className="pure-button" to="/words-of-the-week/">Back</Link>
+            <Link className="pure-button" to="..">Back</Link>
           </li>
         </ul>
       </div>
@@ -179,4 +179,4 @@ function Training({words, voice, setVoice, dictionary}) {
   );
 }
 
-export default Training;
+export default FrenchTraining;

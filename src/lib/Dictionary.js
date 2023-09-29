@@ -1,5 +1,5 @@
-import frenchDict from './fra-eng.json';
-import topWords from './top-5000.json';
+import frenchDict from '../data/fra-eng.json';
+import topWords from '../data/top-5000.json';
 
   // Articles, etc we do not want to consider during lookup
 const removeWords = [

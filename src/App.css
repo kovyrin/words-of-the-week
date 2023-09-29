@@ -15,14 +15,9 @@
   color: white;
 }
 
-.App-subheader {
-  font-size: 0.5em;
-  margin: 3px;
-  font-style: italic;
-}
-
 .App-link {
-  color: #61dafb;
+    color: #fff;
+    text-decoration: none;
 }
 
 .tools {

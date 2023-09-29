@@ -1,6 +1,6 @@
-# French Words of the Week
+# Words of the Week
 
-A simple React application (no backend required) for learning French word pronounciation and spelling. Add new words each week, practice spelling and comprehension, archive the words at the end of the week and start again.
+A simple React application (no backend required) for learning English and French word pronounciation and spelling. Add new words each week, practice spelling and comprehension, archive the words at the end of the week and start again.
 
 ## Available Scripts
 

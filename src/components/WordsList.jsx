@@ -2,7 +2,7 @@ import React from 'react';
 
 import './WordsList.css';
 
-function WordsList({ words, removeWord, dictionary, speaker }) {
+function WordsList({ hideTranslation, words, removeWord, dictionary, speaker }) {
   function sayWordClick(event) {
     const index = event.target.closest('.word').dataset.index;
     speaker.say(words[index]);
@@ -23,7 +23,7 @@ function WordsList({ words, removeWord, dictionary, speaker }) {
         <div className="word" key={index} data-index={index}>
           <div className='word-info' onClick={sayWordClick}>
             <div className="word-text">{word}</div>
-            <div className="word-translation">
+            <div className="word-translation" hidden={hideTranslation}>
               {
                 dictionary.translate(word).map((translation, index) => (
                   <div key={index}>{translation}</div>

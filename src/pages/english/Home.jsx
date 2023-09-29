@@ -8,7 +8,7 @@ import VoiceSelector from '../../components/VoiceSelector';
 
 import { Link } from 'react-router-dom';
 
-function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
+function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
   const speaker = useMemo(() => new BrowserSpeaker(voice), [voice]);
 
   // Add a word to the list
@@ -43,7 +43,7 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
         removeWord={removeWord}
         dictionary={dictionary}
         speaker={speaker}
-        hideTranslation={false}
+        hideTranslation={true}
       />
 
       <AddWord
@@ -59,7 +59,7 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
       </div>
 
       <VoiceSelector
-        lang="french"
+        lang="english"
         currentVoice={voice}
         setCurrentVoice={setVoice}
       />
@@ -67,4 +67,4 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
   );
 }
 
-export default FrenchHome;
+export default EnglishHome;

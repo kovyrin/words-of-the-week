@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div className="App">
       <div className="App-header">
-        <Link to="/words-of-the-week/" class="App-link">Words of the Week</Link>
+        <Link to="/words-of-the-week/" className="App-link">Words of the Week</Link>
       </div>
 
       <Outlet />

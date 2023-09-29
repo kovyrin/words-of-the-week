@@ -2,35 +2,51 @@ import React, {useEffect, useState} from "react";
 
 import './VoiceSelector.css';
 
-const preferredVoices = [
-  'Google français',
-  'Thomas',
-];
+const preferredVoicesForLang = {
+  "french": [
+    'Google français',
+    'Thomas',
+  ],
+  "english": [
+    'Google US English',
+    'Samantha',
+  ],
+};
 
 const speech = window.speechSynthesis;
 
-function VoiceSelector({currentVoice, setCurrentVoice}) {
+function VoiceSelector({lang, currentVoice, setCurrentVoice}) {
   // State for storing available voices
   const [voices, setVoices] = useState([]);
 
   // Populate the voice selector with available voices
   function populateVoices() {
     const systemVoices = speech.getVoices();
-    const frenchVoices = systemVoices.filter(voice => voice.lang === 'fr-FR');
-    setVoices(frenchVoices);
+    const langVoices = systemVoices.filter((voice) => {
+      if (lang === 'english') {
+        return voice.lang.startsWith('en');
+      } else if (lang === 'french') {
+        return voice.lang === 'fr-FR';
+      } else {
+        return false;
+      }
+    });
 
-    if (currentVoice == null) {
-      const selectedVoice = frenchVoices.find(voice => preferredVoices.includes(voice.name));
+    setVoices(langVoices);
+
+    if (currentVoice == null || !langVoices.includes(currentVoice)) {
+      const preferredVoices = preferredVoicesForLang[lang] || [];
+      const selectedVoice = langVoices.find(voice => preferredVoices.includes(voice.name));
       if (selectedVoice != null) {
         setCurrentVoice(selectedVoice);
       } else {
-        setCurrentVoice(frenchVoices[0]);
+        setCurrentVoice(langVoices[0]);
       }
     }
   }
 
   // Populate the list of voices when the page loads (needed for Safari)
-  useEffect(populateVoices, [currentVoice, setCurrentVoice, setVoices]);
+  useEffect(populateVoices, [lang, currentVoice, setCurrentVoice, setVoices]);
 
   // When the SpeechSynthesis object is ready (does not work in Safari), update the list of available voices
   speech.onvoiceschanged = populateVoices;

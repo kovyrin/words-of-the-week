@@ -1,5 +1,5 @@
 import frenchDict from '../data/fra-eng.json';
-import topWords from '../data/top-5000.json';
+import topWords from '../data/french-top-5000.json';
 
   // Articles, etc we do not want to consider during lookup
 const removeWords = [
@@ -27,7 +27,7 @@ Object.keys(frenchDict).forEach(word => {
   noAccentLookup[noAccent].push(word);
 });
 
-class Dictionary {
+class FrenchDictionary {
   constructor() {
     this.topWords = topWords;
   }
@@ -102,4 +102,4 @@ class Dictionary {
   }
 }
 
-export default Dictionary;
+export default FrenchDictionary;

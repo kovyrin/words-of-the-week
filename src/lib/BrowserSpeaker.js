@@ -1,9 +1,10 @@
 // Custom speech rate overrides for different voices
 const speechRateOverrides = {
-  'Thomas': 0.8
+  'Thomas': 0.8,
+  'Samantha': 0.8
 }
 
-class FrenchSpeaker {
+class BrowserSpeaker {
   constructor(voice) {
     this.voice = voice;
     this.speech = window.speechSynthesis;
@@ -19,4 +20,4 @@ class FrenchSpeaker {
   }
 }
 
-export default FrenchSpeaker;
+export default BrowserSpeaker;

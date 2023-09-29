@@ -1,13 +1,13 @@
 import React, { useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
-import VoiceSelector from '../../components/VoiceSelector';
-import FrenchSpeaker from '../../lib/FrenchSpeaker';
+import VoiceSelector from '../components/VoiceSelector';
+import BrowserSpeaker from '../lib/BrowserSpeaker';
 
 import './Training.css';
 
-function FrenchTraining({words, voice, setVoice, dictionary}) {
-  const speaker = useMemo(() => new FrenchSpeaker(voice), [voice]);
+function FrenchTraining({lang, words, voice, setVoice, dictionary}) {
+  const speaker = useMemo(() => new BrowserSpeaker(voice), [voice]);
 
   // State for keeping the list of words to train
   const [previousTrainingWords, setPreviousTrainingWords] = React.useState([]);
@@ -101,7 +101,7 @@ function FrenchTraining({words, voice, setVoice, dictionary}) {
   }
 
   function startTraining(words) {
-    if (words.length > 20) {
+    if (words.length > 50) {
       words = words.sort(() => Math.random() - 0.5).slice(0, 20);
     }
     words = words.sort(() => Math.random() - 0.5); // Shuffle the words
@@ -116,10 +116,26 @@ function FrenchTraining({words, voice, setVoice, dictionary}) {
     startTraining(topWords);
   }
 
+  function sayWordClick(event) {
+    const word = event.target.textContent;
+    speaker.say(word);
+  }
+
   function renderComplete() {
     return (
       <div className="training">
         <div>Training complete!</div>
+        <div>
+          Here are the words you've trained on.<br/>
+          You can click on any word to hear it again.
+        </div>
+        <table className='result-words'>
+          {
+            allTrainingWords.map((word, index) => (
+              <tr key={index}><td onClick={sayWordClick}>{word}</td></tr>
+            ))
+          }
+        </table>
         <div className="tools">
           <div className="tool">
             <button onClick={retryClicked} className="pure-button">Retry</button>
@@ -137,13 +153,19 @@ function FrenchTraining({words, voice, setVoice, dictionary}) {
     return (remainingTrainingWords.length === 0 ? renderComplete() : renderTrainingWord());
   }
 
-  function renderOptions() {
+  function renderOptions(lang) {
+    // Capitalize the language name
+    const langName = lang.charAt(0).toUpperCase() + lang.slice(1);
+
     return (
       <div>
         <div className="description">
-          Start a training session and practice a set of up to 20 French words.<br/>
-          Listen to each word carefully and try to remember how to spell it and what it means.<br/>
-          You can train on the words from this week or from a random set of popular French words.
+          <h4>Start a training session and practice some {langName} words!</h4>
+          <p className='training-guide'>
+            Listen to each word carefully and try to recall how to spell it and what it means.<br/>
+            After you've heard all the words, you will be able to see the spelling for each word.
+          </p>
+          <p>You can train on the words from this week or from a random set of 20 popular {langName} words.</p>
         </div>
 
         <ul className="trainingOptions">
@@ -169,9 +191,10 @@ function FrenchTraining({words, voice, setVoice, dictionary}) {
     <div>
       <h1>Training</h1>
 
-      { trainingStarted ? renderTraining() : renderOptions() }
+      { trainingStarted ? renderTraining() : renderOptions(lang) }
 
       <VoiceSelector
+        lang={lang}
         currentVoice={voice}
         setCurrentVoice={setVoice}
       />

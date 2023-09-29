@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './AddWord.css'
 
-function AddWord({ addWord, dictionary }) {
+function AddWord({ lang, addWord, dictionary }) {
   // Define state for keeping new word, word suggestions and translations
   const [newWord, setNewWord] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -84,6 +84,9 @@ function AddWord({ addWord, dictionary }) {
     return '';
   }
 
+  const inputPlaceholder = lang === "french" ? "Add a French word..." : "Add an English word...";
+  const inputLang = lang === "french" ? "fr" : "en";
+
   return (
     <div className="add-word">
       <form onSubmit={addWordSubmit}>
@@ -91,8 +94,8 @@ function AddWord({ addWord, dictionary }) {
           id="newWord"
           type="text"
           value={newWord}
-          placeholder="Add a French word..."
-          lang="fr"
+          placeholder={inputPlaceholder}
+          lang={inputLang}
           spellCheck={false}
           onChange={newWordChanged}
           autoCorrect="off"

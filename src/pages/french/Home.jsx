@@ -47,6 +47,7 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
       />
 
       <AddWord
+        lang="french"
         addWord={addWord}
         dictionary={dictionary}
       />

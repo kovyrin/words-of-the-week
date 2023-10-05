@@ -99,6 +99,7 @@ function AddWord({ lang, addWord, dictionary }) {
           spellCheck={false}
           onChange={newWordChanged}
           autoCorrect="off"
+          autoCapitalize="none"
         />
         <div className="word-feedback">
           {renderFeedback()}

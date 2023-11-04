@@ -47,9 +47,10 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
       />
 
       <AddWord
-        lang="french"
+        lang="fr"
         addWord={addWord}
         dictionary={dictionary}
+        speaker={speaker}
       />
 
       <div className="tools">
@@ -60,7 +61,6 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
       </div>
 
       <VoiceSelector
-        lang="french"
         currentVoice={voice}
         setCurrentVoice={setVoice}
       />

@@ -47,8 +47,10 @@ function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
       />
 
       <AddWord
+        lang="en"
         addWord={addWord}
         dictionary={dictionary}
+        speaker={speaker}
       />
 
       <div className="tools">
@@ -59,7 +61,6 @@ function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
       </div>
 
       <VoiceSelector
-        lang="english"
         currentVoice={voice}
         setCurrentVoice={setVoice}
       />

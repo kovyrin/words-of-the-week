@@ -14,8 +14,8 @@ class BrowserSpeaker {
     this.ttsUrl = ttsUrl + '&language=' + lang + '&gender=' + voice;
   }
 
-  async say(word) {
-    let audioUrl = this.ttsUrl + '&text=' + word;
+  async preCache(word) {
+    const audioUrl = this.ttsUrl + '&text=' + word;
 
     // Construct the key for IndexedDB and try to get the audio blob
     const dbKey = `mp3:${ttsUrlVersion}:${this.lang}:${this.voice}:${word}`;
@@ -27,6 +27,13 @@ class BrowserSpeaker {
       audioBlob = await response.blob();
       await localForage.setItem(dbKey, audioBlob);
     }
+
+    return audioBlob;
+  }
+
+  async say(word) {
+    // Fetch the audio blob from the local cache or the TTS service
+    const audioBlob = await this.preCache(word);
 
     // Play the audio
     const objectUrl = URL.createObjectURL(audioBlob);

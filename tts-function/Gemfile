@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+# Gemfile
+source 'https://rubygems.org'
+
+gem 'functions_framework', '~> 1.0'
+
+gem 'google-cloud-text_to_speech'
+
+gem 'rubocop', '~> 1.57', require: false
+
+gem 'pry', require: false

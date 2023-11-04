@@ -21,7 +21,7 @@ const englishDictionary = new EnglishDictionary();
 
 function App() {
   // Define state for storing current selected voice for Web Speech API
-  const [voice, setVoice] = useState(null);
+  const [voice, setVoice] = useState('female');
 
   // Define state for storing French words of the week
   const [frenchWords, setFrenchWords] = useState(() => {
@@ -56,7 +56,7 @@ function App() {
               <EnglishHome words={englishWords} setWords={setEnglishWords} voice={voice} setVoice={setVoice} dictionary={englishDictionary} />
             } />
             <Route path="training" element={
-              <Training lang="english" words={englishWords} voice={voice} setVoice={setVoice} dictionary={englishDictionary} />
+              <Training lang="en" words={englishWords} voice={voice} setVoice={setVoice} dictionary={englishDictionary} />
             } />
           </Route>
 
@@ -65,7 +65,7 @@ function App() {
               <FrenchHome words={frenchWords} setWords={setFrenchWords} voice={voice} setVoice={setVoice} dictionary={frenchDictionary} />
             } />
             <Route path="training" element={
-              <Training lang="french" words={frenchWords} voice={voice} setVoice={setVoice} dictionary={frenchDictionary} />
+              <Training lang="fr" words={frenchWords} voice={voice} setVoice={setVoice} dictionary={frenchDictionary} />
             } />
           </Route>
           <Route path="*" element={<NoPage />} />

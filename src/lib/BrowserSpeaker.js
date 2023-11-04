@@ -1,22 +1,18 @@
-// Custom speech rate overrides for different voices
-const speechRateOverrides = {
-  'Thomas': 0.8,
-  'Samantha': 0.8
-}
+const ttsPassword = 'Iewee1ohshaiNgeekadeiYue7fu4Oot5';
+const ttsUrl = 'https://us-central1-words-of-the-week.cloudfunctions.net/tts?password=' + ttsPassword;
 
 class BrowserSpeaker {
-  constructor(voice) {
+  constructor(voice, lang) {
     this.voice = voice;
-    this.speech = window.speechSynthesis;
+    this.lang = lang;
+    this.ttsUrl = ttsUrl + '&language=' + lang + '&gender=' + voice;
   }
 
   say(word) {
-    if (!this.voice) return;
-    word = word.replace('-', ' '); // SpeechSynthesis in Chrome doesn't like hyphens (stops speaking)
-    const message = new SpeechSynthesisUtterance(word);
-    message.voice = this.voice;
-    message.rate = speechRateOverrides[this.voice.name] || 1;
-    this.speech.speak(message);
+    let ttsUrl = this.ttsUrl + '&text=' + word;
+    let audio = new Audio(ttsUrl);
+    audio.playbackRate = 0.9;
+    audio.play();
   }
 }
 

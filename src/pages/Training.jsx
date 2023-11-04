@@ -6,8 +6,8 @@ import BrowserSpeaker from '../lib/BrowserSpeaker';
 
 import './Training.css';
 
-function FrenchTraining({lang, words, voice, setVoice, dictionary}) {
-  const speaker = useMemo(() => new BrowserSpeaker(voice), [voice]);
+function Training({lang, words, voice, setVoice, dictionary}) {
+  const speaker = useMemo(() => new BrowserSpeaker(voice, lang), [lang, voice]);
 
   // State for keeping the list of words to train
   const [previousTrainingWords, setPreviousTrainingWords] = React.useState([]);
@@ -202,4 +202,4 @@ function FrenchTraining({lang, words, voice, setVoice, dictionary}) {
   );
 }
 
-export default FrenchTraining;
+export default Training;

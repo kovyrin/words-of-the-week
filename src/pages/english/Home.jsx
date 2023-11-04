@@ -9,7 +9,7 @@ import VoiceSelector from '../../components/VoiceSelector';
 import { Link } from 'react-router-dom';
 
 function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
-  const speaker = useMemo(() => new BrowserSpeaker(voice), [voice]);
+  const speaker = useMemo(() => new BrowserSpeaker(voice, 'en'), [voice]);
 
   // Add a word to the list
   function addWord(word) {

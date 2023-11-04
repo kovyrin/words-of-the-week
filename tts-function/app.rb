@@ -58,7 +58,14 @@ def tts(query)
     audio_config: { audio_encoding: 'MP3' }
   )
 
-  [200, { 'Content-Type' => 'audio/mpeg' }, [result.audio_content]]
+  headers = {
+    'Content-Type' => 'audio/mpeg',
+    'Access-Control-Allow-Origin' => '*',
+    'Access-Control-Allow-Methods' => 'GET, OPTIONS',
+    'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept',
+  }
+
+  [200, headers, [result.audio_content]]
 end
 
 #------------------------------------------------------------------------------

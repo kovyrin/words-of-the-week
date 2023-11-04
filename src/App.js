@@ -36,6 +36,22 @@ function App() {
     return localData ? JSON.parse(localData) : [];
   })
 
+  // Archive the words of the week
+  async function archiveWords(words, setWords, speaker) {
+    if (!window.confirm("Are you sure you want to archive the words of the week?")) {
+      return;
+    }
+
+    // Delete caches for all words before archiving them
+    await Promise.all(words.forEach(async word => await speaker.deleteCacheFor(word)));
+
+    // Move the words to the archive and clear the list
+    let archive = JSON.parse(localStorage.getItem('wordsArchive')) || [];
+    archive = [...archive, ...words];
+    localStorage.setItem('wordsArchive', JSON.stringify(archive));
+    setWords([]);
+  }
+
   // When the French words state changes, update localStorage
   useEffect(() => {
     localStorage.setItem('french_words', JSON.stringify(frenchWords));

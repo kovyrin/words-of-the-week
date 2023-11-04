@@ -17,19 +17,16 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
     if (newWord !== '') setWords([...words, newWord]);
   }
 
-  // Remove a word from the list
-  function removeWord(index) {
-    const newWords = [...words];
-    newWords.splice(index, 1);
-    setWords(newWords);
-  }
-
   // Archive the words of the week
-  function archiveWords() {
+  async function archiveWords() {
     if (!window.confirm("Are you sure you want to archive the words of the week?")) {
       return;
     }
 
+    // Delete caches for all words before archiving them
+    await Promise.all(words.map(async word => await speaker.deleteCacheFor(word)));
+
+    // Move the words to the archive and clear the list
     let archive = JSON.parse(localStorage.getItem('wordsArchive')) || [];
     archive = [...archive, ...words];
     localStorage.setItem('wordsArchive', JSON.stringify(archive));
@@ -40,7 +37,7 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
     <div>
       <WordsList
         words={words}
-        removeWord={removeWord}
+        setWords={setWords}
         dictionary={dictionary}
         speaker={speaker}
         hideTranslation={false}

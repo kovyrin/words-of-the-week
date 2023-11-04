@@ -31,6 +31,14 @@ class BrowserSpeaker {
     return audioBlob;
   }
 
+  async deleteCacheFor(word) {
+    await Promise.all(['male', 'female'].map(async voice => {
+      const dbKey = `mp3:${ttsUrlVersion}:${this.lang}:${voice}:${word}`;
+      await localForage.removeItem(dbKey);
+      console.log('Deleted cache for ' + dbKey);
+    }));
+  }
+
   async say(word) {
     // Fetch the audio blob from the local cache or the TTS service
     const audioBlob = await this.preCache(word);

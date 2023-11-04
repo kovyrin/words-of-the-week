@@ -2,18 +2,24 @@ import React from 'react';
 
 import './WordsList.css';
 
-function WordsList({ hideTranslation, words, removeWord, dictionary, speaker }) {
+function WordsList({ hideTranslation, words, setWords, dictionary, speaker }) {
   function sayWordClick(event) {
     const index = event.target.closest('.word').dataset.index;
     speaker.say(words[index]);
   }
 
-  function deleteWordClick(event) {
+  async function deleteWordClick(event) {
     if (!window.confirm("Are you sure you want to delete this word?")) {
       return;
     }
     const index = event.target.closest('.word').dataset.index;
-    removeWord(index);
+    const word = words[index];
+
+    const newWords = [...words];
+    newWords.splice(index, 1);
+    setWords(newWords);
+
+    await speaker.deleteCacheFor(word);
   }
 
   return (

@@ -20,8 +20,10 @@ class FrenchDictionary {
   }
 
   suggest(word) {
+    const lcWord = word.toLowerCase();
     return this.englishWords.filter(englishWord => {
-      return englishWord.toLowerCase().startsWith(word.toLowerCase()) && englishWord !== word;
+      const lcEnglishWord = englishWord.toLowerCase();
+      return lcEnglishWord.startsWith(lcWord) && lcEnglishWord !== lcWord;
     }).slice(0, 10);
   }
 }

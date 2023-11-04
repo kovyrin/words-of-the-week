@@ -1,15 +1,15 @@
 import React, {useMemo} from 'react';
 
-import BrowserSpeaker from '../../lib/BrowserSpeaker';
+import BrowserSpeaker from '../lib/BrowserSpeaker';
 
-import WordsList from '../../components/WordsList';
-import AddWord from '../../components/AddWord';
-import VoiceSelector from '../../components/VoiceSelector';
+import WordsList from '../components/WordsList';
+import AddWord from '../components/AddWord';
+import VoiceSelector from '../components/VoiceSelector';
 
 import { Link } from 'react-router-dom';
 
-function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
-  const speaker = useMemo(() => new BrowserSpeaker(voice, 'fr'), [voice]);
+function Home({lang, words, setWords, voice, setVoice, dictionary}) {
+  const speaker = useMemo(() => new BrowserSpeaker(voice, lang), [lang, voice]);
 
   // Add a word to the list
   function addWord(word) {
@@ -44,7 +44,7 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
       />
 
       <AddWord
-        lang="fr"
+        lang={lang}
         addWord={addWord}
         dictionary={dictionary}
         speaker={speaker}
@@ -65,4 +65,4 @@ function FrenchHome({words, setWords, voice, setVoice, dictionary}) {
   );
 }
 
-export default FrenchHome;
+export default Home;

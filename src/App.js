@@ -11,10 +11,8 @@ import NoPage from "./pages/NoPage";
 
 import AppSelector from "./pages/AppSelector";
 
-import FrenchHome from "./pages/french/Home";
+import Home from "./pages/Home";
 import Training from "./pages/Training";
-
-import EnglishHome from "./pages/english/Home";
 
 const frenchDictionary = new FrenchDictionary();
 const englishDictionary = new EnglishDictionary();
@@ -36,22 +34,6 @@ function App() {
     return localData ? JSON.parse(localData) : [];
   })
 
-  // Archive the words of the week
-  async function archiveWords(words, setWords, speaker) {
-    if (!window.confirm("Are you sure you want to archive the words of the week?")) {
-      return;
-    }
-
-    // Delete caches for all words before archiving them
-    await Promise.all(words.forEach(async word => await speaker.deleteCacheFor(word)));
-
-    // Move the words to the archive and clear the list
-    let archive = JSON.parse(localStorage.getItem('wordsArchive')) || [];
-    archive = [...archive, ...words];
-    localStorage.setItem('wordsArchive', JSON.stringify(archive));
-    setWords([]);
-  }
-
   // When the French words state changes, update localStorage
   useEffect(() => {
     localStorage.setItem('french_words', JSON.stringify(frenchWords));
@@ -69,19 +51,41 @@ function App() {
           <Route index element={<AppSelector />} />
           <Route path="english">
             <Route index element={
-              <EnglishHome words={englishWords} setWords={setEnglishWords} voice={voice} setVoice={setVoice} dictionary={englishDictionary} />
+              <Home
+                lang="en"
+                words={englishWords}
+                setWords={setEnglishWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={englishDictionary} />
             } />
             <Route path="training" element={
-              <Training lang="en" words={englishWords} voice={voice} setVoice={setVoice} dictionary={englishDictionary} />
+              <Training
+                lang="en"
+                words={englishWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={englishDictionary} />
             } />
           </Route>
 
           <Route path="french">
             <Route index element={
-              <FrenchHome words={frenchWords} setWords={setFrenchWords} voice={voice} setVoice={setVoice} dictionary={frenchDictionary} />
+              <Home
+                lang="fr"
+                words={frenchWords}
+                setWords={setFrenchWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={frenchDictionary} />
             } />
             <Route path="training" element={
-              <Training lang="fr" words={frenchWords} voice={voice} setVoice={setVoice} dictionary={frenchDictionary} />
+              <Training
+                lang="fr"
+                words={frenchWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={frenchDictionary} />
             } />
           </Route>
           <Route path="*" element={<NoPage />} />

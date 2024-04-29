@@ -3,11 +3,11 @@ import React, {useEffect, useState} from "react";
 import './VoiceSelector.css';
 
 const preferredVoicesForLang = {
-  "french": [
+  "fr": [
     'Google français',
     'Thomas',
   ],
-  "english": [
+  "en": [
     'Google US English',
     'Samantha',
   ],
@@ -23,9 +23,9 @@ function VoiceSelector({lang, currentVoice, setCurrentVoice}) {
   function populateVoices() {
     const systemVoices = speech.getVoices();
     const langVoices = systemVoices.filter((voice) => {
-      if (lang === 'english') {
+      if (lang === 'en') {
         return voice.lang.startsWith('en');
-      } else if (lang === 'french') {
+      } else if (lang === 'fr') {
         return voice.lang === 'fr-FR';
       } else {
         return false;

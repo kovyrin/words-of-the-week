@@ -1,14 +1,14 @@
 import React, {useMemo} from 'react';
 
-import BrowserSpeaker from '../../lib/BrowserSpeaker';
+import BrowserSpeaker from '../lib/BrowserSpeaker';
 
-import WordsList from '../../components/WordsList';
-import AddWord from '../../components/AddWord';
-import VoiceSelector from '../../components/VoiceSelector';
+import WordsList from '../components/WordsList';
+import AddWord from '../components/AddWord';
+import VoiceSelector from '../components/VoiceSelector';
 
 import { Link } from 'react-router-dom';
 
-function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
+function Home({lang, words, setWords, voice, setVoice, dictionary}) {
   const speaker = useMemo(() => new BrowserSpeaker(voice), [voice]);
 
   // Add a word to the list
@@ -43,10 +43,11 @@ function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
         removeWord={removeWord}
         dictionary={dictionary}
         speaker={speaker}
-        hideTranslation={true}
+        hideTranslation={false}
       />
 
       <AddWord
+        lang={lang}
         addWord={addWord}
         dictionary={dictionary}
       />
@@ -59,7 +60,7 @@ function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
       </div>
 
       <VoiceSelector
-        lang="english"
+        lang={lang}
         currentVoice={voice}
         setCurrentVoice={setVoice}
       />
@@ -67,4 +68,4 @@ function EnglishHome({words, setWords, voice, setVoice, dictionary}) {
   );
 }
 
-export default EnglishHome;
+export default Home;

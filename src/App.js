@@ -11,10 +11,8 @@ import NoPage from "./pages/NoPage";
 
 import AppSelector from "./pages/AppSelector";
 
-import FrenchHome from "./pages/french/Home";
+import Home from "./pages/Home";
 import Training from "./pages/Training";
-
-import EnglishHome from "./pages/english/Home";
 
 const frenchDictionary = new FrenchDictionary();
 const englishDictionary = new EnglishDictionary();
@@ -53,19 +51,41 @@ function App() {
           <Route index element={<AppSelector />} />
           <Route path="english">
             <Route index element={
-              <EnglishHome words={englishWords} setWords={setEnglishWords} voice={voice} setVoice={setVoice} dictionary={englishDictionary} />
+              <Home
+                lang="en"
+                words={englishWords}
+                setWords={setEnglishWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={englishDictionary} />
             } />
             <Route path="training" element={
-              <Training lang="english" words={englishWords} voice={voice} setVoice={setVoice} dictionary={englishDictionary} />
+              <Training
+                lang="en"
+                words={englishWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={englishDictionary} />
             } />
           </Route>
 
           <Route path="french">
             <Route index element={
-              <FrenchHome words={frenchWords} setWords={setFrenchWords} voice={voice} setVoice={setVoice} dictionary={frenchDictionary} />
+              <Home
+                lang="fr"
+                words={frenchWords}
+                setWords={setFrenchWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={frenchDictionary} />
             } />
             <Route path="training" element={
-              <Training lang="french" words={frenchWords} voice={voice} setVoice={setVoice} dictionary={frenchDictionary} />
+              <Training
+                lang="fr"
+                words={frenchWords}
+                voice={voice}
+                setVoice={setVoice}
+                dictionary={frenchDictionary} />
             } />
           </Route>
           <Route path="*" element={<NoPage />} />

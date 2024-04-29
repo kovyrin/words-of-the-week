@@ -84,8 +84,7 @@ function AddWord({ lang, addWord, dictionary }) {
     return '';
   }
 
-  const inputPlaceholder = lang === "french" ? "Add a French word..." : "Add an English word...";
-  const inputLang = lang === "french" ? "fr" : "en";
+  const inputPlaceholder = lang === "fr" ? "Add a French word..." : "Add an English word...";
 
   return (
     <div className="add-word">
@@ -95,7 +94,7 @@ function AddWord({ lang, addWord, dictionary }) {
           type="text"
           value={newWord}
           placeholder={inputPlaceholder}
-          lang={inputLang}
+          lang={lang}
           spellCheck={false}
           onChange={newWordChanged}
           autoCorrect="off"

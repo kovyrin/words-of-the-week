@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/words-of-the-week/static/css/main.b824dc09.css",
-    "main.js": "/words-of-the-week/static/js/main.bfd7a6f7.js",
+    "main.css": "/words-of-the-week/static/css/main.0520fcf0.css",
+    "main.js": "/words-of-the-week/static/js/main.813e6777.js",
     "index.html": "/words-of-the-week/index.html",
-    "main.b824dc09.css.map": "/words-of-the-week/static/css/main.b824dc09.css.map",
-    "main.bfd7a6f7.js.map": "/words-of-the-week/static/js/main.bfd7a6f7.js.map"
+    "main.0520fcf0.css.map": "/words-of-the-week/static/css/main.0520fcf0.css.map",
+    "main.813e6777.js.map": "/words-of-the-week/static/js/main.813e6777.js.map"
   },
   "entrypoints": [
-    "static/css/main.b824dc09.css",
-    "static/js/main.bfd7a6f7.js"
+    "static/css/main.0520fcf0.css",
+    "static/js/main.813e6777.js"
   ]
 }

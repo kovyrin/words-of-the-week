@@ -100,9 +100,9 @@ function FrenchTraining({lang, words, voice, setVoice, dictionary}) {
     setPreviousTrainingWords([]);
   }
 
-  function startTraining(words) {
-    if (words.length > 50) {
-      words = words.sort(() => Math.random() - 0.5).slice(0, 20);
+  function startTraining(words, maxWords) {
+    if (maxWords > 0 && words.length > maxWords) {
+      words = words.sort(() => Math.random() - 0.5).slice(0, maxWords);
     }
     words = words.sort(() => Math.random() - 0.5); // Shuffle the words
     setAllTrainingWords(words);
@@ -113,7 +113,7 @@ function FrenchTraining({lang, words, voice, setVoice, dictionary}) {
 
   function startTrainingTop(n) {
     const topWords = dictionary.top(n);
-    startTraining(topWords);
+    startTraining(topWords, 20);
   }
 
   function sayWordClick(event) {
@@ -153,9 +153,16 @@ function FrenchTraining({lang, words, voice, setVoice, dictionary}) {
     return (remainingTrainingWords.length === 0 ? renderComplete() : renderTrainingWord());
   }
 
+  function getLanguageName(code) {
+    const languageNames = {
+      'fr': 'French',
+      'en': 'English'
+    };
+    return languageNames[code] || code;
+  }
+
   function renderOptions(lang) {
-    // Capitalize the language name
-    const langName = lang.charAt(0).toUpperCase() + lang.slice(1);
+    const langName = getLanguageName(lang);
 
     return (
       <div>
@@ -169,7 +176,16 @@ function FrenchTraining({lang, words, voice, setVoice, dictionary}) {
         </div>
 
         <ul className="trainingOptions">
-          <li><button className="pure-button" onClick={() => startTraining(words)}>Words of the Week</button></li>
+          <li>
+            <button className="pure-button" onClick={() => startTraining(words, 20)}>
+              Words of the Week ({words.length > 20 ? 'up to 20' : words.length})
+            </button>
+          </li>
+          {words.length > 20 && (
+            <li>
+              <button className="pure-button" onClick={() => startTraining(words, 0)}>Words of the Week (all)</button>
+            </li>
+          )}
           <li>
             <button className="pure-button" onClick={() => startTrainingTop(100)}>Top-100</button>
           </li>

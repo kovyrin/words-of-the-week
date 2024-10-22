@@ -36,7 +36,7 @@
 
 .tool .pure-button {
   margin: 0 5px;
-  width: 80px;
+  min-width: 80px;
   height: 80px;
   display:flex;
   align-items:center;
